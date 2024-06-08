@@ -1,0 +1,576 @@
+/*-------------- Reset CSS----------- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+body::-webkit-scrollbar-track{
+    background-color: #ccc;
+}
+
+#app{
+
+}
+
+/* -----------------------------CSS cho phần Header (phần đầu trang web) -----------------------------------*/
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 1px 0 8px 0 #ccc;
+    .nav-top{
+        background-color: beige;
+        background-image: linear-gradient(rgb(255, 240, 218), rgb(255, 255, 255));
+        padding: 8px;
+        height: 54px;
+        ul{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            justify-content: space-evenly;
+            gap: 16px;
+            li{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                &:hover{
+                    img{
+                        color: red;
+                    }
+                    color: red;
+                }
+            }
+        }
+    }
+    .nav-main{
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        padding: 8px;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                padding: 0 8px;
+            }
+        }
+        ul:nth-child(1){
+            color: red;
+            font-weight: 900;
+            font-size: 1.6rem;
+        }
+        ul:nth-child(2){
+            li{
+                text-transform: uppercase;
+                cursor: pointer;
+
+            }
+        }
+        ul:nth-child(3){
+            li{
+                display: flex;
+                align-items: center;
+                position: relative;
+                img{
+                    position: absolute;
+                    left: 16px;
+                }
+                input{
+                    padding: 12px;
+                    padding-left: 44px;
+                    width: 360px;
+                    max-width: 100%;
+                    border: none;
+                    background-color: #f2f2f2;
+                    outline: none;
+                    &:focus{
+                        outline: 1px solid red;
+                    }
+                }
+            }
+        }
+        ul:last-child{
+            display: none;
+            img{
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
+
+/* -----------------------------CSS cho phần Main (phần thân trang web) -----------------------------------*/
+#main{
+    margin-top: 124px;
+    .section-one{
+        .slider{
+            width: 3260px;
+            max-width: 100%;
+            height: calc(100vh - 124px);
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider .list{
+            position: absolute;
+            width: max-content;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            transition: 1s;
+        }
+        .slider .list img{
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+        .slider .buttons{
+            position: absolute;
+            top: 45%;
+            left: 1%;
+            right: 1%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .slider .buttons button{
+            width: 36px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: rgba(204, 204, 204, 0.4);
+            color: #fff;
+            border: none;
+            font-family: monospace;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .slider .dots{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            color: #fff;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .slider .dots li{
+            list-style: none;
+            width: 10px;
+            height: 8px;
+            background-color: #fff;
+            margin: 16px;
+            border-radius: 4px;
+            transition: 0.5s;
+        }
+        .slider .dots li.active{
+            width: 30px;
+        }
+        @media screen and (max-width: 768px){
+            .slider{
+                height: 400px;
+            }
+        }
+    }
+    .section-two{
+        --columns: 6;
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0;
+        ul{
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            li{
+                border: 1px solid #ccc;
+                width: calc(100% / var(--columns) - 16px);
+                aspect-ratio: 5/3;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 1px 1px 4px #ccc;
+                &:hover{
+                    border-color: red;
+                }
+                img{
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    .section-abc{
+        padding: 2.4vw;
+        .list{
+            margin: 2rem 0;
+            --columns: 5;
+            --space: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space);
+            margin-left: 16px;
+            .item{
+                width: calc(100% / var(--columns) - var(--space));
+                figure img{
+                    width: 100%;
+                    aspect-ratio: 3/4;
+                }
+            }
+        }
+    }
+    .section-three{
+        .item2{
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .section-four{
+        img{
+            width: 100%;
+        }
+    }
+    .section-five {
+        padding: 2.4vw;
+        --spacing: 10px;
+        margin: 1rem 0;
+        strong {
+            font-size: 1.5rem;
+        }
+    
+        .list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            padding: var(--spacing);
+    
+            .item {
+                padding: var(--spacing);
+
+                // border: 1px solid #ccc;
+                a {
+                    max-width: 100%;
+    
+                    img {
+                        max-width: 100%;
+                        border-radius: 4px;
+                        &:hover {
+                            transform: translateY(-1px) scale(1.01);
+                        }
+                    }
+                }
+            }
+    
+            .item:first-child {
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+    
+            .item:nth-child(n+2) a {
+                display: flex;
+    
+                figure {
+                    width: calc(100% / 3);
+                }
+    
+                figcaption {
+                    flex: 1;
+                    padding-left: 10px;
+                }
+            }
+        }
+    
+        .button {
+            display: block;
+            margin: auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid orangered;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+    
+            a {
+                color: orangered;
+                padding: 8px 10px;
+                display: block;
+    
+                &::after {
+                    content: "›";
+                    padding-left: 6px;
+                }
+    
+                &:hover {
+                    background-color: orangered;
+                    color: white;
+                    transition: 0.5s;
+                }
+    
+            }
+        }
+    }
+}
+/* -----------------------------CSS cho phần Footer (phần cuối trang web) ---------------------------------*/
+#footer{
+    background-color: #fafafa;
+    .footer-main{
+        padding: 3.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .item{
+            min-width: 25%;
+            ul{
+                li{
+                    margin: 14px 0;
+                }
+            }
+        }
+        .item:nth-child(3){
+            ul+ul{
+                display: flex;
+                li{
+                    margin: 0;
+                    svg{
+                        border: 1px solid black;
+                        border-radius: 4px;
+                        background-color: #ccc;
+                        width: 32px;
+                        height: 32px;
+                    } 
+                }
+                li+li{
+                    margin-left: 16px;
+                    
+                }
+            }
+        }
+        .item:nth-child(4){
+            ul+h3+ul{
+                display: flex;
+            }
+            ul{
+                li{
+                    label{
+                        input,button{
+                            padding: 6px 8px;
+                            outline: none;
+                            border: 1px solid #ccc;
+                        }
+                        button{
+                            background-color: orangered;
+                            color: white; 
+                            border: none;  
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        background-color: #2d2d2d;
+        text-align: center;
+        p{
+            min-height: 55px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+/* ------------------------------------------Responsive -------------------------------------------*/
+/* @media screen {  */
+  /* Được dùng khi không ăn responsive */
+/* } */
+
+/* Màn hình Desktop cực lớn */
+@media screen and (min-width: 1920px){
+
+}
+/* Màn hình Desktop lớn */
+@media screen and (max-width: 1492px){
+
+}
+/* Màn hình Desktop */
+@media screen and (max-width: 1200px){
+    #header{
+        .nav-main{
+            ul:nth-child(3){
+                flex: 1;
+                justify-content: center;
+                li{
+                    width: 100%;
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Màn hình Tablet lớn */
+@media screen and (max-width: 992px){
+    #header{
+        .nav-main{
+            ul:nth-child(1){
+            }
+            ul:nth-child(2){
+                display: none;
+            }
+            ul:nth-child(3){
+                flex: none;
+                justify-content: space-between;
+                li{
+                    input{
+                        width: 360px;
+                    }
+                }
+            }
+        }
+    }
+    #main{
+        .section-one{
+            
+        }
+        .section-two{
+            --columns: 4;
+
+        }
+    }
+
+}
+/* Màn hình Tablet */
+@media screen and (max-width: 768px) {
+    #header{
+        .nav-top{
+            ul{
+                li{
+                    span{
+                        font-size: 0;
+                    }
+                }
+            }
+        }
+        .nav-main{
+            ul:nth-child(1){
+            }
+            ul:nth-child(2){
+                display: none;
+            }
+            ul:nth-child(3){
+                flex: 1;
+                justify-content: center;
+                li{
+                    width: 100%;
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #main{
+        .section-one{
+            
+        }
+        .section-two{
+            --columns: 4;
+
+        }
+        .section-five {
+            --spacing: 4px;
+    
+            .list {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+    
+                .item {
+                    padding: var(--spacing);
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                        a {
+                        max-width: 100%;
+    
+                        img {
+                            max-width: 100%;
+                            border-radius: 4px;
+    
+                            &:hover {
+                                transform: translateY(-1px) scale(1.01);
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+    #footer {
+        .footer-main{
+            padding: 1.4rem;
+        }
+    }
+}
+/* Màn hình Mobile */
+@media screen and (max-width : 534px){
+    #header{
+        .nav-main{
+            justify-content: space-between;
+            ul:nth-child(1){
+            }
+            ul:nth-child(2){
+                display: none;
+            }
+            ul:nth-child(4){
+                display: none;
+            }
+            ul:last-child{
+                display: flex;
+            }
+        }
+    }
+    #main{
+        .section-one{
+            
+        }
+        .section-two{
+            --columns: 3;
+
+        }
+        .section-three{
+            .item1{
+                display: none;
+            }
+            .item2{
+                display: block;
+            }
+        }
+    }
+}
+/* Màn hình Mobile cực nhỏ */
+@media screen and (max-width : 320px){
+
+}

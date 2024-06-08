@@ -1,0 +1,473 @@
+@charset "UTF-8";
+/*-------------- Reset CSS----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+
+/* -----------------------------CSS cho phần Header (phần đầu trang web) -----------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 1px 0 8px 0 #ccc;
+}
+#header .nav-top {
+  background-color: beige;
+  background-image: linear-gradient(rgb(255, 240, 218), rgb(255, 255, 255));
+  padding: 8px;
+  height: 54px;
+}
+#header .nav-top ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+#header .nav-top ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+#header .nav-top ul li:hover {
+  color: red;
+}
+#header .nav-top ul li:hover img {
+  color: red;
+}
+#header .nav-main {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 8px;
+}
+#header .nav-main ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .nav-main ul li {
+  padding: 0 8px;
+}
+#header .nav-main ul:nth-child(1) {
+  color: red;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+#header .nav-main ul:nth-child(2) li {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#header .nav-main ul:nth-child(3) li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#header .nav-main ul:nth-child(3) li img {
+  position: absolute;
+  left: 16px;
+}
+#header .nav-main ul:nth-child(3) li input {
+  padding: 12px;
+  padding-left: 44px;
+  width: 360px;
+  max-width: 100%;
+  border: none;
+  background-color: #f2f2f2;
+  outline: none;
+}
+#header .nav-main ul:nth-child(3) li input:focus {
+  outline: 1px solid red;
+}
+#header .nav-main ul:last-child {
+  display: none;
+}
+#header .nav-main ul:last-child img {
+  width: 32px;
+  height: 32px;
+}
+
+/* -----------------------------CSS cho phần Main (phần thân trang web) -----------------------------------*/
+#main {
+  margin-top: 124px;
+}
+#main .section-one .slider {
+  width: 3260px;
+  max-width: 100%;
+  height: calc(100vh - 124px);
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+#main .section-one .slider .list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+#main .section-one .slider .list img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main .section-one .slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  right: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+#main .section-one .slider .buttons button {
+  width: 36px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: rgba(204, 204, 204, 0.4);
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+#main .section-one .slider .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+#main .section-one .slider .dots li {
+  list-style: none;
+  width: 10px;
+  height: 8px;
+  background-color: #fff;
+  margin: 16px;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+#main .section-one .slider .dots li.active {
+  width: 30px;
+}
+@media screen and (max-width: 768px) {
+  #main .section-one .slider {
+    height: 400px;
+  }
+}
+#main .section-two {
+  --columns: 6;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+#main .section-two ul {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+#main .section-two ul li {
+  border: 1px solid #ccc;
+  width: calc(100% / var(--columns) - 16px);
+  aspect-ratio: 5/3;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 4px #ccc;
+}
+#main .section-two ul li:hover {
+  border-color: red;
+}
+#main .section-two ul li img {
+  width: 100%;
+  border-radius: 4px;
+}
+#main .section-abc {
+  padding: 2.4vw;
+}
+#main .section-abc .list {
+  margin: 2rem 0;
+  --columns: 5;
+  --space: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+  margin-left: 16px;
+}
+#main .section-abc .list .item {
+  width: calc(100% / var(--columns) - var(--space));
+}
+#main .section-abc .list .item figure img {
+  width: 100%;
+  aspect-ratio: 3/4;
+}
+#main .section-three .item2 {
+  display: none;
+}
+#main .section-three img {
+  width: 100%;
+}
+#main .section-four img {
+  width: 100%;
+}
+#main .section-five {
+  padding: 2.4vw;
+  --spacing: 10px;
+  margin: 1rem 0;
+}
+#main .section-five strong {
+  font-size: 1.5rem;
+}
+#main .section-five .list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: var(--spacing);
+}
+#main .section-five .list .item {
+  padding: var(--spacing);
+}
+#main .section-five .list .item a {
+  max-width: 100%;
+}
+#main .section-five .list .item a img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+#main .section-five .list .item a img:hover {
+  transform: translateY(-1px) scale(1.01);
+}
+#main .section-five .list .item:first-child {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+#main .section-five .list .item:nth-child(n+2) a {
+  display: flex;
+}
+#main .section-five .list .item:nth-child(n+2) a figure {
+  width: 33.3333333333%;
+}
+#main .section-five .list .item:nth-child(n+2) a figcaption {
+  flex: 1;
+  padding-left: 10px;
+}
+#main .section-five .button {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid orangered;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+#main .section-five .button a {
+  color: orangered;
+  padding: 8px 10px;
+  display: block;
+}
+#main .section-five .button a::after {
+  content: "›";
+  padding-left: 6px;
+}
+#main .section-five .button a:hover {
+  background-color: orangered;
+  color: white;
+  transition: 0.5s;
+}
+
+/* -----------------------------CSS cho phần Footer (phần cuối trang web) ---------------------------------*/
+#footer {
+  background-color: #fafafa;
+}
+#footer .footer-main {
+  padding: 3.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer .footer-main .item {
+  min-width: 25%;
+}
+#footer .footer-main .item ul li {
+  margin: 14px 0;
+}
+#footer .footer-main .item:nth-child(3) ul + ul {
+  display: flex;
+}
+#footer .footer-main .item:nth-child(3) ul + ul li {
+  margin: 0;
+}
+#footer .footer-main .item:nth-child(3) ul + ul li svg {
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #ccc;
+  width: 32px;
+  height: 32px;
+}
+#footer .footer-main .item:nth-child(3) ul + ul li + li {
+  margin-left: 16px;
+}
+#footer .footer-main .item:nth-child(4) ul + h3 + ul {
+  display: flex;
+}
+#footer .footer-main .item:nth-child(4) ul li label input, #footer .footer-main .item:nth-child(4) ul li label button {
+  padding: 6px 8px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+#footer .footer-main .item:nth-child(4) ul li label button {
+  background-color: orangered;
+  color: white;
+  border: none;
+}
+#footer .footer-bottom {
+  background-color: #2d2d2d;
+  text-align: center;
+}
+#footer .footer-bottom p {
+  min-height: 55px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------------Responsive -------------------------------------------*/
+/* @media screen {  */
+/* Được dùng khi không ăn responsive */
+/* } */
+/* Màn hình Desktop cực lớn */
+/* Màn hình Desktop lớn */
+/* Màn hình Desktop */
+@media screen and (max-width: 1200px) {
+  #header .nav-main ul:nth-child(3) {
+    flex: 1;
+    justify-content: center;
+  }
+  #header .nav-main ul:nth-child(3) li {
+    width: 100%;
+  }
+  #header .nav-main ul:nth-child(3) li input {
+    width: 100%;
+  }
+}
+/* Màn hình Tablet lớn */
+@media screen and (max-width: 992px) {
+  #header .nav-main ul:nth-child(2) {
+    display: none;
+  }
+  #header .nav-main ul:nth-child(3) {
+    flex: none;
+    justify-content: space-between;
+  }
+  #header .nav-main ul:nth-child(3) li input {
+    width: 360px;
+  }
+  #main .section-two {
+    --columns: 4;
+  }
+}
+/* Màn hình Tablet */
+@media screen and (max-width: 768px) {
+  #header .nav-top ul li span {
+    font-size: 0;
+  }
+  #header .nav-main ul:nth-child(2) {
+    display: none;
+  }
+  #header .nav-main ul:nth-child(3) {
+    flex: 1;
+    justify-content: center;
+  }
+  #header .nav-main ul:nth-child(3) li {
+    width: 100%;
+  }
+  #header .nav-main ul:nth-child(3) li input {
+    width: 100%;
+  }
+  #main .section-two {
+    --columns: 4;
+  }
+  #main .section-five {
+    --spacing: 4px;
+  }
+  #main .section-five .list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  #main .section-five .list .item {
+    padding: var(--spacing);
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #main .section-five .list .item a {
+    max-width: 100%;
+  }
+  #main .section-five .list .item a img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  #main .section-five .list .item a img:hover {
+    transform: translateY(-1px) scale(1.01);
+  }
+  #footer .footer-main {
+    padding: 1.4rem;
+  }
+}
+/* Màn hình Mobile */
+@media screen and (max-width: 534px) {
+  #header .nav-main {
+    justify-content: space-between;
+  }
+  #header .nav-main ul:nth-child(2) {
+    display: none;
+  }
+  #header .nav-main ul:nth-child(4) {
+    display: none;
+  }
+  #header .nav-main ul:last-child {
+    display: flex;
+  }
+  #main .section-two {
+    --columns: 3;
+  }
+  #main .section-three .item1 {
+    display: none;
+  }
+  #main .section-three .item2 {
+    display: block;
+  }
+}
+/* Màn hình Mobile cực nhỏ */
+
+/*# sourceMappingURL=style.css.map */
