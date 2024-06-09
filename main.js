@@ -37,3 +37,13 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
+
+function closeMenu() {
+    let slider = document.getElementById("sidebar");
+    slider.classList.remove('open');
+}
+
+function openMenu() {
+    let slider = document.getElementById("sidebar");
+    slider.classList.add('open');
+}

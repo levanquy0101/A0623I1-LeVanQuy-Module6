@@ -17,7 +17,7 @@
                     <img src="./assets/icons/phone.svg" alt="">
                     <span style="color: red;">+84&nbsp;123&nbsp;456&nbsp;789</span>
                 </li>
-                <li><img src="/assets/icons/phone.svg" alt="">
+                <li><img src="./assets/icons/phone.svg" alt="">
                     <span>Tra&nbsp;cứu đơn&nbsp;hàng</span>
                 </li>
                 <li>
@@ -54,22 +54,42 @@
                 <li>Đăng ký</li>
             </ul>
             <ul>
-                <li><img src="./assets/icons/menu.svg" alt=""></li>
+                <li><img src="./assets/icons/menu.svg" alt="" onclick="openMenu()"></li>
             </ul>
         </nav>
     </header>
+    <aside id="sidebar">
+        <div class="menu-sidebar">
+            <div class="menu-top">
+                <h2>FM</h2>
+                <button class="button" onclick="closeMenu()">X</button>
+            </div>
+            <div class="menu-content">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <li>Item 6</li>
+                    <li>Item 7</li>
+                    <li>Item 8</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
     <main id="main">
         <section class="section-one">
             <div class="slider">
                 <div class="list">
-                    <div class="item" style="background-color: rgb(173, 173, 173);">
-                        <img src="https://media.fmplus.com.vn/uploads/sliders/03bed345-df20-4ba8-80ec-4d637392d95e.jpg" alt="">
+                    <div class="item">
+                        <img src="./assets/imgs/slider1.jpg" alt="Slider Img1">
                     </div>
-                    <div class="item" style="background-color: rgb(118, 118, 118);">
-                        <img src="https://media.fmplus.com.vn/uploads/sliders/3db10944-7817-4c48-9565-dcf816a840ee.jpg" alt="">
+                    <div class="item">
+                        <img src="./assets/imgs/slider2.jpg" alt="Slider Img2">
                     </div>
-                    <div class="item" style="background-color: rgb(145, 145, 145);">
-                        <img src="https://media.fmplus.com.vn/uploads/sliders/9ec34c1e-ac69-4b8d-a543-9b3fc37cdc99.png" alt="">
+                    <div class="item">
+                        <img src="./assets/imgs/slider3.png" alt="Slider Img3">
                     </div>
                 </div>
                 <div class="buttons">
@@ -192,6 +212,88 @@
         <section class="section-four">
             <img src="https://media-fmplus.cdn.vccloud.vn/uploads/sliders/48773c7d-80e2-4207-8ccc-ad79b804397a.png" alt="">
         </section>
+        <section class="section-abc">
+            <h3>Sản phẩm mới</h3>
+            <div class="list">
+                <div class="item">
+                    <a to="/news">
+                        <figure>
+                            <img src="https://picsum.photos/501/300" alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi kiểu nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a to="/news">
+                        <figure>
+                            <img src="https://picsum.photos/501/300" alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi kiểu nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a to="/news">
+                        <figure>
+                            <img src="https://picsum.photos/501/300" alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi kiểu nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a to="/news">
+                        <figure>
+                            <img src="https://picsum.photos/501/300" alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi kiểu nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a to="/news">
+                        <figure>
+                            <img src="https://picsum.photos/501/300" alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi kiểu nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a to="/news">
+                        <figure>
+                            <img src="https://picsum.photos/501/300" alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi kiểu nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a to="/news">
+                        <figure>
+                            <img src="https://picsum.photos/501/300" alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi kiểu nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section class="section-five">
             <h3>Tin tức thời trang</h3>
             <div class="list">
@@ -304,8 +406,12 @@
                 </ul>
                 <h3>Tải ứng dụng của chúng tôi tại:</h3>
                 <ul>
-                    <li>App Store</li>
-                    <li>CH Play</li>
+                    <li>
+                        <img src="./assets/imgs/appstore.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./assets/imgs/googleplay.png" alt="">
+                    </li>
                 </ul>
             </div>
         </div>
