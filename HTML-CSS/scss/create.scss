@@ -1,0 +1,122 @@
+/*-------------- Reset CSS----------- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/* -----------------------------CSS cho phần Main (phần thân trang web) -----------------------------------*/
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: #f4f6f8;
+    .create{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+        .form{
+            width: 80%;
+            height: 80%;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 4px;
+            padding: 8px;
+            .item1{
+                display: flex;
+                flex-wrap: wrap;
+                label{
+                    width: 50%;
+                    padding: 8px;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        width: 25%;
+                        min-width: 110px;
+                    }
+                    input,select{
+                        padding: 8px;
+                        border: 1px solid #000;
+                        border-radius: 4px;
+                        flex: 1;
+                        outline: none;
+                        &:focus{
+                            border-color: rgb(110, 177, 9);
+                        }
+                    }
+                }
+            }
+            .item2{
+                display: flex;
+                justify-content: end;
+                input{
+                    padding: 4px;
+                    margin: 0 8px;
+                }
+            }
+        }
+
+    }
+}
+
+/* ------------------------------------------Responsive -------------------------------------------*/
+/* @media screen {  */
+  /* Được dùng khi không ăn responsive */
+/* } */
+
+/* Màn hình Desktop cực lớn */
+@media screen and (min-width: 1920px){
+}
+/* Màn hình Desktop lớn */
+@media screen and (max-width: 1492px){
+
+}
+/* Màn hình Desktop */
+@media screen and (max-width: 1200px){
+
+}
+/* Màn hình Tablet lớn */
+@media screen and (max-width: 992px){
+    #main{
+        .create{
+            .form{
+                .item1{
+                    label{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Màn hình Tablet */
+@media screen and (max-width: 768px) {
+    #main{
+        .create{
+            .form{
+                .item1{
+                    label{
+                        width: 100%;
+                        flex-direction: column;
+                        span,input,select{
+                            width: 100%;
+                        }
+                        span{
+                            margin-bottom: 8px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+/* Màn hình Mobile */
+@media screen and (max-width : 534px){
+
+}
+/* Màn hình Mobile cực nhỏ */
+@media screen and (max-width : 320px){
+
+}

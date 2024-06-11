@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*-------------- Reset CSS----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* -----------------------------CSS cho phần Main (phần thân trang web) -----------------------------------*/
+#main {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f6f8;
+}
+#main .create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+#main .create .form {
+  width: 80%;
+  height: 80%;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px;
+}
+#main .create .form .item1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main .create .form .item1 label {
+  width: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+#main .create .form .item1 label span {
+  width: 25%;
+  min-width: 110px;
+}
+#main .create .form .item1 label input, #main .create .form .item1 label select {
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  flex: 1;
+  outline: none;
+}
+#main .create .form .item1 label input:focus, #main .create .form .item1 label select:focus {
+  border-color: rgb(110, 177, 9);
+}
+#main .create .form .item2 {
+  display: flex;
+  justify-content: end;
+}
+#main .create .form .item2 input {
+  padding: 4px;
+  margin: 0 8px;
+}
+
+/* ------------------------------------------Responsive -------------------------------------------*/
+/* @media screen {  */
+/* Được dùng khi không ăn responsive */
+/* } */
+/* Màn hình Desktop cực lớn */
+/* Màn hình Desktop lớn */
+/* Màn hình Desktop */
+/* Màn hình Tablet lớn */
+@media screen and (max-width: 992px) {
+  #main .create .form .item1 label {
+    width: 100%;
+  }
+}
+/* Màn hình Tablet */
+@media screen and (max-width: 768px) {
+  #main .create .form .item1 label {
+    width: 100%;
+    flex-direction: column;
+  }
+  #main .create .form .item1 label span, #main .create .form .item1 label input, #main .create .form .item1 label select {
+    width: 100%;
+  }
+  #main .create .form .item1 label span {
+    margin-bottom: 8px;
+  }
+}
+/* Màn hình Mobile */
+/* Màn hình Mobile cực nhỏ */
+
+/*# sourceMappingURL=create.css.map */
