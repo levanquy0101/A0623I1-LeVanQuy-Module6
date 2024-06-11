@@ -1,5 +1,6 @@
 package com.example.fashionshop.services.impl;
 
+import com.example.fashionshop.dto.UserDTO;
 import com.example.fashionshop.dto.UserInforUserDetails;
 import com.example.fashionshop.entity.User;
 import com.example.fashionshop.entity.UserRole;
@@ -22,7 +23,7 @@ public class UserInforDetailService implements UserDetailsService {
     private IUserRoleRepo iUserRoleRepository;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User appUser = iUserRepository.findUserByUsername(username);
+        User appUser = iUserRepository.findByUsername(username);
         List<UserRole> userRoles = iUserRoleRepository.findAllByUser(appUser);
         UserInforUserDetails infoUserDetails = new UserInforUserDetails(appUser, userRoles);
         return infoUserDetails;

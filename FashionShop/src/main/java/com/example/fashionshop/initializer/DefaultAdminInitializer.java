@@ -34,12 +34,13 @@ public class DefaultAdminInitializer implements CommandLineRunner {
                 // Nếu chưa có, tạo mới Role ROLE_ADMIN
                 adminRole = new Role();
                 adminRole.setName("ROLE_ADMIN");
+//                adminRole.setLevel(1);
                 roleService.save(adminRole);
             }
             // Tạo tài khoản admin mặc định
             User admin = new User();
             admin.setUsername("admin");
-            admin.setEncrytedPassword(passwordEncoder.encode("1234"));
+            admin.setPassword(passwordEncoder.encode("1234"));
             admin.setRole(adminRole);
             admin.setEnabled(true);
             userService.save(admin);

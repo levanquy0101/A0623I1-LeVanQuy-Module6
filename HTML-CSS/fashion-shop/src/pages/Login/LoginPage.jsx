@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import * as LoginService from '../../services/api/LoginService'
+import * as LoginService from '../../services/auth/LoginService'
 
 function LoginPage(props) {
     const { register, handleSubmit, formState: { errors } } = useForm();

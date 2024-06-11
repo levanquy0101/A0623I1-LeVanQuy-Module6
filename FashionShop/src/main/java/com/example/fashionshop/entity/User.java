@@ -18,10 +18,9 @@ public class User {
     @Column
     private String username;
     @Column
-    private String encrytedPassword;
+    private String password;
     @Column
     private boolean enabled;
-
     @ManyToOne
     @JoinColumn
     private Role role;
@@ -94,12 +93,12 @@ public class User {
         this.username = username;
     }
 
-    public String getEncrytedPassword() {
-        return encrytedPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setEncrytedPassword(String encrytedPassword) {
-        this.encrytedPassword = encrytedPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {

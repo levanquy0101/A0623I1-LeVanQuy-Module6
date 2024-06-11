@@ -29,7 +29,10 @@ function Sidebar(props) {
                 <div>
                     <h3>Quản lý bán hàng</h3>
                     <ul className='px-4'>
-                        <li>Thông tin cá nhân</li>
+                        <li>
+                            <Link to="/dashboard/infor">Thông tin cá nhân</Link>
+                        </li>
+                        <li>Đăng thông báo</li>
                         <li>Xem báo cáo</li>
                         <li>Hàng trong kho</li>
                         <li>Quản lý khách hàng</li>

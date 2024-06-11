@@ -8,33 +8,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/{username}")
 @CrossOrigin(origins = "*")
 public class StoreManagerRestController {
 
     @Autowired
     private IUserService iUserService;
-
-//    // Endpoint để lấy tất cả người dùng
-//    @GetMapping("/manager")
-//    public List<User> getAllUsers() {
-//        return iUserService.findAll();
-//    }
-
-    // Endpoint để lấy thông tin một người dùng theo ID
-    @GetMapping("manager/{id}")
+    @GetMapping("")
     @ResponseBody
-    public User getUserById(@PathVariable Long id) {
-        User user = iUserService.findById(id);
+    public User getUserById(@PathVariable String username) {
+        User user = iUserService.findByUsername(username);
         System.out.println(user);
         return user;
     }
 
-    @GetMapping("manager/{id}")
+    @GetMapping("/manager")
     @ResponseBody
-    public User getFunction(@PathVariable Long id) {
-        User user = iUserService.findById(id);
-        System.out.println(user);
-        return user;
+    public User getFunction(@PathVariable String username) {
+        User userDTO = iUserService.findByUsername(username);
+        System.out.println(userDTO);
+        return userDTO;
     }
 }

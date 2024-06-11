@@ -16,7 +16,7 @@ public class UserInforUserDetails implements UserDetails {
 
     public UserInforUserDetails(User user, List<UserRole> userRoles) {
         username = user.getUsername();
-        password = user.getEncrytedPassword();
+        password = user.getPassword();
         authorities = new ArrayList<>();
         if (userRoles != null) {
             for (UserRole userRole : userRoles) {
