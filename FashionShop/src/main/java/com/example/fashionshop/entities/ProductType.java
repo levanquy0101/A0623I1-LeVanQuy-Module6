@@ -1,17 +1,20 @@
-package com.example.fashionshop.entity;
+package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-public class FuncSystem {
+public class ProductType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
     @Column
     private String name;
+    @ManyToOne
+    @JoinColumn
+    private ProductTarget target;
 
-    public FuncSystem() {
+    public ProductType() {
     }
 
     public Long getId() {
@@ -28,5 +31,13 @@ public class FuncSystem {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public ProductTarget getTarget() {
+        return target;
+    }
+
+    public void setTarget(ProductTarget target) {
+        this.target = target;
     }
 }

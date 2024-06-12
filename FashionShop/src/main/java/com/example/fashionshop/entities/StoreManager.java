@@ -1,11 +1,9 @@
-package com.example.fashionshop.entity;
+package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-
 @Entity
-public class SalesMan {
+public class StoreManager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +16,7 @@ public class SalesMan {
     @Column
     private String instruct;
 
-    public SalesMan() {
+    public StoreManager() {
     }
 
     public Long getId() {

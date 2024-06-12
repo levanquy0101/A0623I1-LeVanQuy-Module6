@@ -1,7 +1,6 @@
 package com.example.fashionshop.services;
 
-import com.example.fashionshop.entity.Customer;
-import com.example.fashionshop.entity.SalesMan;
+import com.example.fashionshop.entities.SalesMan;
 
 import java.util.List;
 

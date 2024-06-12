@@ -1,8 +1,6 @@
 package com.example.fashionshop.services;
 
-import com.example.fashionshop.entity.Role;
-
-import java.util.Optional;
+import com.example.fashionshop.entities.Role;
 
 public interface IRoleService {
 //    Optional<Role> existByName(String name);

@@ -1,9 +1,9 @@
-package com.example.fashionshop.entity;
+package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-public class ProductType {
+public class CustomerLevel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
@@ -11,7 +11,7 @@ public class ProductType {
     @Column
     private String name;
 
-    public ProductType() {
+    public CustomerLevel() {
     }
 
     public Long getId() {

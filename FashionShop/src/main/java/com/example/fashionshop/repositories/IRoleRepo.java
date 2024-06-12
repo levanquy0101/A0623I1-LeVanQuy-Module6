@@ -1,6 +1,6 @@
 package com.example.fashionshop.repositories;
 
-import com.example.fashionshop.entity.Role;
+import com.example.fashionshop.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

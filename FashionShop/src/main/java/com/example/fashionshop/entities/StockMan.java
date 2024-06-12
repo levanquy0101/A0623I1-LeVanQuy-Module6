@@ -1,11 +1,10 @@
-package com.example.fashionshop.entity;
+package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 
 @Entity
-public class StoreManager {
+public class StockMan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -14,11 +13,11 @@ public class StoreManager {
     private UserRole userRole;
     @ManyToOne
     @JoinColumn
-    private  RoleFunction roleFunction;
+    private RoleFunction roleFunction;
     @Column
     private String instruct;
 
-    public StoreManager() {
+    public StockMan() {
     }
 
     public Long getId() {

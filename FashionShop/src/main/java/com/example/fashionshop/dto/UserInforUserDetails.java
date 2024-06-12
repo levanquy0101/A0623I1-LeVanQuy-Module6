@@ -1,6 +1,6 @@
 package com.example.fashionshop.dto;
-import com.example.fashionshop.entity.User;
-import com.example.fashionshop.entity.UserRole;
+import com.example.fashionshop.entities.User;
+import com.example.fashionshop.entities.UserRole;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,5 +1,5 @@
 package com.example.fashionshop.services.impl;
-import com.example.fashionshop.entity.SalesMan;
+import com.example.fashionshop.entities.SalesMan;
 import com.example.fashionshop.repositories.ISalesManRepo;
 import com.example.fashionshop.services.ISalesManService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,10 @@
 package com.example.fashionshop.services.impl;
 
-import com.example.fashionshop.entity.Role;
+import com.example.fashionshop.entities.Role;
 import com.example.fashionshop.repositories.IRoleRepo;
 import com.example.fashionshop.services.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class RoleService implements IRoleService {

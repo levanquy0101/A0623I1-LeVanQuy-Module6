@@ -1,7 +1,7 @@
 package com.example.fashionshop.initializer;
 
-import com.example.fashionshop.entity.Role;
-import com.example.fashionshop.entity.User;
+import com.example.fashionshop.entities.Role;
+import com.example.fashionshop.entities.User;
 import com.example.fashionshop.services.IRoleService;
 import com.example.fashionshop.services.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;

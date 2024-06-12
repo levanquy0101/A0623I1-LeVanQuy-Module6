@@ -1,8 +1,8 @@
 package com.example.fashionshop.repositories;
 
-import com.example.fashionshop.entity.Notification;
-import com.example.fashionshop.entity.SalesMan;
-import com.example.fashionshop.entity.StockMan;
+import com.example.fashionshop.entities.Notification;
+import com.example.fashionshop.entities.SalesMan;
+import com.example.fashionshop.entities.StockMan;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

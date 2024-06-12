@@ -1,17 +1,20 @@
-package com.example.fashionshop.entity;
+package com.example.fashionshop.entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 
 @Entity
-public class CustomerLevel {
+public class ProductTarget {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
-    @Column
+
     private String name;
 
-    public CustomerLevel() {
+    public ProductTarget() {
     }
 
     public Long getId() {

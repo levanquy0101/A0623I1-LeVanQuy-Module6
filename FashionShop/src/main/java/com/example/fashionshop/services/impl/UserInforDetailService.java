@@ -1,9 +1,8 @@
 package com.example.fashionshop.services.impl;
 
-import com.example.fashionshop.dto.UserDTO;
 import com.example.fashionshop.dto.UserInforUserDetails;
-import com.example.fashionshop.entity.User;
-import com.example.fashionshop.entity.UserRole;
+import com.example.fashionshop.entities.User;
+import com.example.fashionshop.entities.UserRole;
 import com.example.fashionshop.repositories.IUserRepo;
 import com.example.fashionshop.repositories.IUserRoleRepo;
 import org.springframework.beans.factory.annotation.Autowired;

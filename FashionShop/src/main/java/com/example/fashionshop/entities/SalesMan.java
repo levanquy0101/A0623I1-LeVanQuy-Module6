@@ -1,10 +1,9 @@
-package com.example.fashionshop.entity;
+package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
 
-
 @Entity
-public class StockMan {
+public class SalesMan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,11 +12,11 @@ public class StockMan {
     private UserRole userRole;
     @ManyToOne
     @JoinColumn
-    private RoleFunction roleFunction;
+    private  RoleFunction roleFunction;
     @Column
     private String instruct;
 
-    public StockMan() {
+    public SalesMan() {
     }
 
     public Long getId() {

@@ -1,20 +1,20 @@
-package com.example.fashionshop.entity;
+package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-public class ProductImage {
+public class Size {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
     @Column
-    private String urlName;
+    private String name;
     @ManyToOne
     @JoinColumn
     private Product product;
 
-    public ProductImage() {
+    public Size() {
     }
 
     public Long getId() {
@@ -25,12 +25,12 @@ public class ProductImage {
         this.id = id;
     }
 
-    public String getUrlName() {
-        return urlName;
+    public String getName() {
+        return name;
     }
 
-    public void setUrlName(String urlName) {
-        this.urlName = urlName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Product getProduct() {

@@ -1,6 +1,6 @@
 package com.example.fashionshop.controllers;
 
-import com.example.fashionshop.entity.SalesMan;
+import com.example.fashionshop.entities.SalesMan;
 import com.example.fashionshop.services.ISalesManService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,6 @@
 package com.example.fashionshop.services;
 
-import com.example.fashionshop.dto.UserDTO;
-import com.example.fashionshop.entity.User;
+import com.example.fashionshop.entities.User;
 
 public interface IUserService {
     boolean existsByUsername(String admin);
