@@ -28,11 +28,11 @@ body::-webkit-scrollbar-track {
   top: 0;
   width: 100%;
   z-index: 100;
-  box-shadow: 1px 0 8px 0 #ccc;
+  box-shadow: 1px 0 8px 0 #333;
 }
 #header .nav-top {
   background-color: beige;
-  background-image: linear-gradient(rgb(255, 240, 218), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(254, 236, 200), rgb(255, 255, 255));
   padding: 8px;
   height: 54px;
 }
@@ -68,7 +68,27 @@ body::-webkit-scrollbar-track {
   align-items: center;
 }
 #header .nav-main ul li {
-  padding: 0 8px;
+  padding: 0 12px;
+}
+#header .nav-main ul .btn {
+  padding: 8px 0;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: red;
+  -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+  height: 40px;
+  font-size: 0.86rem;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  transition: 0.2s 0.1s;
+  background-image: linear-gradient(90deg, rgb(255, 165, 132), rgb(255, 255, 150));
+  border: 0 solid;
+  overflow: hidden;
 }
 #header .nav-main ul:nth-child(1) {
   color: red;
@@ -77,7 +97,32 @@ body::-webkit-scrollbar-track {
 }
 #header .nav-main ul:nth-child(2) li {
   text-transform: uppercase;
+  color: #11006F;
   cursor: pointer;
+  position: relative;
+}
+#header .nav-main ul:nth-child(2) li a {
+  color: #110070;
+}
+#header .nav-main ul:nth-child(2) li:hover a {
+  color: #fcaf17;
+  width: 100%;
+}
+#header .nav-main ul:nth-child(2) li::after {
+  position: absolute;
+  width: 80%;
+  height: 2.8px;
+  background-color: #11006F;
+  content: "";
+  display: none;
+  color: red;
+  right: 10px;
+  left: 10px;
+  bottom: -6px;
+  animation: moveright 1s linear infinite;
+}
+#header .nav-main ul:nth-child(2) li:hover::after {
+  display: block;
 }
 #header .nav-main ul:nth-child(3) li {
   display: flex;
@@ -86,7 +131,7 @@ body::-webkit-scrollbar-track {
 }
 #header .nav-main ul:nth-child(3) li img {
   position: absolute;
-  left: 16px;
+  left: 20px;
 }
 #header .nav-main ul:nth-child(3) li input {
   padding: 12px;
@@ -128,6 +173,7 @@ body::-webkit-scrollbar-track {
 #sidebar .menu-sidebar .menu-top {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #ccc;
 }
 #sidebar .menu-sidebar .menu-top h2 {
   color: red;
@@ -135,6 +181,19 @@ body::-webkit-scrollbar-track {
 #sidebar .menu-sidebar .menu-top .button {
   width: 24px;
   height: 24px;
+}
+#sidebar .menu-sidebar .menu-content {
+  padding: 8px;
+}
+#sidebar .menu-sidebar .menu-content ul li {
+  margin: 8px 0;
+}
+#sidebar .menu-sidebar .menu-bottom {
+  border-top: 1px solid #ccc;
+  padding: 12px;
+}
+#sidebar .menu-sidebar .menu-bottom ul li {
+  margin: 8px 0;
 }
 #sidebar.open {
   display: block;
@@ -153,7 +212,6 @@ body::-webkit-scrollbar-track {
   margin-top: 124px;
 }
 #main .section-one .slider {
-  width: 3260px;
   max-width: 100%;
   height: calc(100vh - 124px);
   margin: auto;
@@ -162,7 +220,6 @@ body::-webkit-scrollbar-track {
 }
 #main .section-one .slider .list {
   position: absolute;
-  width: max-content;
   height: 100%;
   left: 0;
   top: 0;
@@ -170,10 +227,8 @@ body::-webkit-scrollbar-track {
   transition: 1s;
 }
 #main .section-one .slider .list img {
-  min-width: 100vw;
-  min-height: 100%;
+  width: 100vw;
   height: 100%;
-  object-fit: cover;
   background-color: #ccc;
 }
 #main .section-one .slider .buttons {
@@ -227,7 +282,8 @@ body::-webkit-scrollbar-track {
   --columns: 6;
   display: flex;
   justify-content: center;
-  margin: 4rem 0;
+  padding-top: 25px;
+  margin: 2rem 0;
 }
 #main .section-two ul {
   width: 75%;
@@ -255,6 +311,23 @@ body::-webkit-scrollbar-track {
 #main .section-abc {
   padding: 2.4vw;
 }
+#main .section-abc h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  position: relative;
+  display: flex;
+}
+#main .section-abc h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #fcaf17;
+  margin-left: -8px;
+}
 #main .section-abc .list {
   margin: 2rem 0;
   --columns: 5;
@@ -266,10 +339,58 @@ body::-webkit-scrollbar-track {
 }
 #main .section-abc .list .item {
   width: calc(100% / var(--columns) - var(--space));
+  border: 1px solid #ccc;
+  cursor: pointer;
+  overflow: hidden;
+}
+#main .section-abc .list .item figure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
 }
 #main .section-abc .list .item figure img {
   width: 100%;
-  aspect-ratio: 3/4;
+  transition: transform 0.3s;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #ccc;
+}
+#main .section-abc .list .item figure:hover img {
+  transform: scale(1.05);
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#main .section-abc .list .item figcaption {
+  background-color: white;
+  padding: 8px;
+}
+#main .section-abc .list .item figcaption p:first-child {
+  color: red;
+}
+#main .section-abc .button {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid orangered;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+#main .section-abc .button a {
+  color: orangered;
+  padding: 8px 10px;
+  display: block;
+}
+#main .section-abc .button a::after {
+  content: "›";
+  padding-left: 6px;
+}
+#main .section-abc .button a:hover {
+  background-color: orangered;
+  color: white;
+  transition: 0.5s;
 }
 #main .section-three .item2 {
   display: none;
@@ -279,6 +400,7 @@ body::-webkit-scrollbar-track {
 }
 #main .section-four img {
   width: 100%;
+  min-height: 150px;
 }
 #main .section-five {
   padding: 2.4vw;
@@ -287,6 +409,27 @@ body::-webkit-scrollbar-track {
 }
 #main .section-five strong {
   font-size: 1.5rem;
+}
+#main .section-five .top {
+  display: flex;
+  justify-content: space-between;
+}
+#main .section-five .top h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  position: relative;
+  display: flex;
+}
+#main .section-five .top h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #fcaf17;
+  margin-left: -8px;
 }
 #main .section-five .list {
   display: grid;
@@ -346,9 +489,16 @@ body::-webkit-scrollbar-track {
   transition: 0.5s;
 }
 
+.zalo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 /* -----------------------------CSS cho phần Footer (phần cuối trang web) ---------------------------------*/
 #footer {
   background-color: #fafafa;
+  border-top: 1px solid #ccc;
 }
 #footer .footer-main {
   padding: 3.2rem;
@@ -490,11 +640,6 @@ body::-webkit-scrollbar-track {
     padding: 1.4rem;
   }
 }
-@media screen and (min-width: 535px) {
-  #sidebar {
-    display: none !important;
-  }
-}
 /* Màn hình Mobile */
 @media screen and (max-width: 534px) {
   #header .nav-main {
@@ -508,6 +653,9 @@ body::-webkit-scrollbar-track {
   }
   #header .nav-main ul:last-child {
     display: flex;
+  }
+  #main .section-one .slider {
+    height: 300px;
   }
   #main .section-two {
     --columns: 3;
@@ -525,5 +673,22 @@ body::-webkit-scrollbar-track {
   }
 }
 /* Màn hình Mobile cực nhỏ */
+@keyframes moveright {
+  0% {
+    width: 20%;
+  }
+  25% {
+    width: 40%;
+  }
+  50% {
+    width: 60%;
+  }
+  75% {
+    width: 80%;
+  }
+  100% {
+    width: 80%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -47,3 +47,5 @@ function openMenu() {
     let slider = document.getElementById("sidebar");
     slider.classList.add('open');
 }
+
+

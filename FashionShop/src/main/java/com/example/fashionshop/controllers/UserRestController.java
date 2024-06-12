@@ -13,7 +13,7 @@ public class UserRestController {
     @Autowired
     private IUserService iUserService;
 
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_MANAGER')")
+//    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_MANAGER')")
     @PostMapping("/create")
     @ResponseBody
     public User createUser(@RequestBody User user) {
