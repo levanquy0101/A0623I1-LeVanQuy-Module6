@@ -1,8 +1,8 @@
-let modeSwitch = document.querySelector('.mode-switch');
-modeSwitch.addEventListener('click', function () {
-  document.documentElement.classList.toggle('dark');
- modeSwitch.classList.toggle('active');
-});
+// let modeSwitch = document.querySelector('.mode-switch');
+// modeSwitch.addEventListener('click', function () {
+//   document.documentElement.classList.toggle('dark');
+//  modeSwitch.classList.toggle('active');
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const btnBar = document.querySelector('.btn-bar');

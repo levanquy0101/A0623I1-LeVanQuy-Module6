@@ -3,8 +3,9 @@ package com.example.fashionshop.controllers;
 import com.example.fashionshop.entities.Customer;
 import com.example.fashionshop.services.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -15,26 +16,28 @@ public class CustomerRestController {
     private ICustomerService iCustomerService;
 
     @GetMapping("")
-    @ResponseBody
-    public List<Customer> getAll() {
-        return iCustomerService.findAll();
+    public ResponseEntity<List<Customer>> getAllCustomer() {
+        List<Customer> customers = iCustomerService.findAll();
+        return new ResponseEntity<>(customers, HttpStatus.OK);
     }
 
     @PostMapping("/create")
-    @ResponseBody
-    public Customer createCustomer(@RequestBody Customer customer) {
-        return iCustomerService.save(customer);
+    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+        Customer createdCustomer = iCustomerService.save(customer);
+        return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
     }
 
     @PutMapping("/update/{id}")
-    @ResponseBody
-    public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
-        return iCustomerService.update(id, customer);
+    public ResponseEntity<Customer> updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
+        Customer updatedCustomer = iCustomerService.update(id, customer);
+        return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
-    @ResponseBody
-    public void deleteCustomer(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteCustomer(@PathVariable Long id) {
         iCustomerService.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
+
+

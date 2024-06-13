@@ -7,7 +7,9 @@
   list-style: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+// body{
+//     background-color: #2d2d2d;
+// }
 
 body::-webkit-scrollbar{
     width: 10px;
@@ -20,9 +22,6 @@ body::-webkit-scrollbar-track{
     background-color: #ccc;
 }
 
-#app{
-
-}
 
 /* -----------------------------CSS cho phần Header (phần đầu trang web) -----------------------------------*/
 #header{
@@ -47,10 +46,16 @@ body::-webkit-scrollbar-track{
                 align-items: center;
                 gap: 10px;
                 cursor: pointer;
+                a{
+                    color: black;
+                }
                 &:hover{
                     img{
                         color: red;
                     }
+                    color: red;
+                }
+                &:hover a{
                     color: red;
                 }
             }
@@ -68,6 +73,9 @@ body::-webkit-scrollbar-track{
             align-items: center;
             li{
                 padding: 0 12px;
+                a{
+                    color: red;
+                }
             }
             .btn{
                 padding: 8px 0;
@@ -134,7 +142,7 @@ body::-webkit-scrollbar-track{
                 display: flex;
                 align-items: center;
                 position: relative;
-                img{
+                svg{
                     position: absolute;
                     left: 20px;
                 }
@@ -189,7 +197,7 @@ body::-webkit-scrollbar-track{
             }
         }
         .menu-content{
-            padding: 8px;
+            padding: 12px;
             ul{
                 li{
                     margin: 8px 0;
@@ -222,7 +230,7 @@ body::-webkit-scrollbar-track{
 /* -----------------------------CSS cho phần Main (phần thân trang web) -----------------------------------*/
 #main{
     margin-top: 124px;
-    .section-one{
+    .section-slider{
         .slider{
             // width: 3260px;
             max-width: 100%;
@@ -293,7 +301,7 @@ body::-webkit-scrollbar-track{
             }
         }
     }
-    .section-two{
+    .section-category{
         --columns: 6;
         display: flex;
         justify-content: center;
@@ -323,7 +331,7 @@ body::-webkit-scrollbar-track{
             }
         }
     }
-    .section-abc{
+    .section-list{
         padding: 2.4vw;
         h3{
             text-transform: uppercase;
@@ -379,6 +387,9 @@ body::-webkit-scrollbar-track{
                     p:first-child{
                         color: red;
                     }
+                    p:last-child{
+                        color: black;
+                    }
                 }
             }
         }
@@ -425,7 +436,7 @@ body::-webkit-scrollbar-track{
             min-height: 150px;
         }
     }
-    .section-five {
+    .section-news {
         padding: 2.4vw;
         --spacing: 10px;
         margin: 1rem 0;
@@ -452,6 +463,9 @@ body::-webkit-scrollbar-track{
                     margin-left: -8px;
                 }
             }
+            a{
+                color: black;
+            }
         }
         .list {
             display: grid;
@@ -461,11 +475,11 @@ body::-webkit-scrollbar-track{
     
             .item {
                 padding: var(--spacing);
-
-                // border: 1px solid #ccc;
+                figcaption{
+                    color: black;
+                }
                 a {
                     max-width: 100%;
-    
                     img {
                         max-width: 100%;
                         border-radius: 4px;
@@ -534,6 +548,9 @@ body::-webkit-scrollbar-track{
 #footer{
     background-color: #fafafa;
     border-top: 1px solid #ccc;
+    a{
+        color: black;
+    }
     .footer-main{
         padding: 3.2rem;
         display: flex;
@@ -655,9 +672,6 @@ body::-webkit-scrollbar-track{
         }
     }
     #main{
-        .section-one{
-            
-        }
         .section-two{
             --columns: 4;
 
@@ -671,15 +685,13 @@ body::-webkit-scrollbar-track{
         .nav-top{
             ul{
                 li{
-                    span{
+                    a{
                         font-size: 0;
                     }
                 }
             }
         }
         .nav-main{
-            ul:nth-child(1){
-            }
             ul:nth-child(2){
                 display: none;
             }
@@ -696,21 +708,15 @@ body::-webkit-scrollbar-track{
         }
     }
     #main{
-        .section-one{
-            
-        }
-        .section-two{
-        }
-        .section-abc{
+        .section-list{
             .list{
                 --columns: 3;
                 --space: 16px;
                 margin-left: var(--space);
             }
         }
-        .section-five {
+        .section-news {
             --spacing: 4px;
-    
             .list {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
@@ -766,11 +772,11 @@ body::-webkit-scrollbar-track{
                 height: 300px;
             }
         }
-        .section-two{
+        .section-category{
             --columns: 3;
 
         }
-        .section-abc{
+        .section-list{
             .list{
                 --columns: 2;
                 --space: 16px;

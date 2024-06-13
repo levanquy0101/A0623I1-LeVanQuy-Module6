@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./home.css">
+    <title>Fashion Shop</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="nav-top">
+            <ul>
+                <li><svg font-size="24" width="1em" height="1em" viewBox="0 0 18 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.5 8.46287V8.48806C16.5 8.58671 16.4979 8.68327 16.4926 8.77982V8.79031C16.5 9.63636 15.6216 14.0776 8.99842 21C2.42794 14.1301 1.5 10.0909 1.50738 8.8176C1.50738 8.8092 1.50527 8.79976 1.50527 8.78926C1.50316 8.68222 1.5 8.38397 1.5 8.27273C1.5 4.15141 4.85747 1 8.99842 1C13.1394 1 16.4989 4.3426 16.4989 8.46392L16.5 8.46287Z"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M8.99839 11.9086C10.704 11.9086 12.0866 10.484 12.0866 8.72674C12.0866 6.96947 10.704 5.54492 8.99839 5.54492C7.29281 5.54492 5.91016 6.96947 5.91016 8.72674C5.91016 10.484 7.29281 11.9086 8.99839 11.9086Z"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                    <a href="#!">Hệ&nbsp;thống cửa&nbsp;hàng</a>
+                </li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.26987 10.0076C8.95819 11.5094 10.7895 14.5887 14.5963 15.7611C15.0678 15.9063 15.5825 15.7947 15.9319 15.4464C16.2277 15.1507 16.6002 14.7739 16.9381 14.4298C17.4475 13.911 18.2821 13.9078 18.7968 14.4224L21.6164 17.2418C22.1279 17.7532 22.1279 18.5815 21.6164 19.0929L19.3356 21.3735C18.7578 21.9512 17.9043 22.1512 17.1328 21.8818C13.8164 20.7231 5.06402 16.7966 2.09181 6.85363C1.86658 6.10117 2.06129 5.28452 2.6149 4.7278C3.30532 4.03533 4.27466 3.07555 4.98298 2.37677C5.49553 1.87162 6.31752 1.87478 6.82692 2.38413L9.84122 5.39818C10.3527 5.90964 10.3527 6.73787 9.84122 7.24933L8.53931 8.55114C8.15515 8.93526 8.04254 9.51513 8.26882 10.0087L8.26987 10.0076Z"
+                            stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                    <a href="#!" style="color: red;">+84&nbsp;123&nbsp;456&nbsp;789</a>
+                </li>
+                <li><svg font-size="24" width="1em" height="1em" viewBox="0 0 20 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.8261 12.9056C3.68345 12.9056 2.75714 13.8179 2.75714 14.9433C2.75714 16.0688 3.68345 16.9811 4.8261 16.9811C5.96876 16.9811 6.89507 16.0688 6.89507 14.9433C6.89507 13.8179 5.96876 12.9056 4.8261 12.9056ZM1.72266 14.9433C1.72266 13.2552 3.11212 11.8867 4.8261 11.8867C6.54009 11.8867 7.92955 13.2552 7.92955 14.9433C7.92955 16.6315 6.54009 18 4.8261 18C3.11212 18 1.72266 16.6315 1.72266 14.9433Z"
+                            fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14.3105 12.9056C13.1678 12.9056 12.2415 13.8179 12.2415 14.9433C12.2415 16.0688 13.1678 16.9811 14.3105 16.9811C15.4531 16.9811 16.3794 16.0688 16.3794 14.9433C16.3794 13.8179 15.4531 12.9056 14.3105 12.9056ZM11.207 14.9433C11.207 13.2552 12.5965 11.8867 14.3105 11.8867C16.0245 11.8867 17.4139 13.2552 17.4139 14.9433C17.4139 16.6315 16.0245 18 14.3105 18C12.5965 18 11.207 16.6315 11.207 14.9433Z"
+                            fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.37931 1.01887C1.18887 1.01887 1.03448 1.17093 1.03448 1.3585V13.2453C1.03448 13.4328 1.18887 13.5849 1.37931 13.5849H2.24138C2.52704 13.5849 2.75862 13.813 2.75862 14.0943C2.75862 14.3757 2.52704 14.6038 2.24138 14.6038H1.37931C0.617538 14.6038 0 13.9955 0 13.2453V1.3585C0 0.608221 0.617538 0 1.37931 0H10C10.7618 0 11.3793 0.60822 11.3793 1.3585V5.6038C11.3793 5.88516 11.1477 6.11324 10.8621 6.11324C10.5764 6.11324 10.3448 5.88516 10.3448 5.6038V1.3585C10.3448 1.17093 10.1904 1.01887 10 1.01887H1.37931Z"
+                            fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.89844 14.0934C6.89844 13.8121 7.13001 13.584 7.41568 13.584H11.726C12.0117 13.584 12.2433 13.8121 12.2433 14.0934C12.2433 14.3748 12.0117 14.6029 11.726 14.6029H7.41568C7.13001 14.6029 6.89844 14.3748 6.89844 14.0934Z"
+                            fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10.3438 4.75498C10.3438 4.0047 10.9613 3.39648 11.7231 3.39648H16.4074C16.8919 3.39648 17.3409 3.64685 17.5901 4.05604L19.9252 7.88912C19.9734 7.9683 19.9989 8.05889 19.9989 8.15123V13.2456C19.9989 13.9959 19.3814 14.6041 18.6196 14.6041H16.8955C16.6098 14.6041 16.3782 14.376 16.3782 14.0947C16.3782 13.8133 16.6098 13.5852 16.8955 13.5852H18.6196C18.8101 13.5852 18.9644 13.4332 18.9644 13.2456V8.29233L16.7031 4.58025C16.6407 4.47795 16.5285 4.41536 16.4074 4.41536H11.7231C11.5326 4.41536 11.3782 4.56741 11.3782 4.75498V14.0947C11.3782 14.376 11.1467 14.6041 10.861 14.6041C10.5753 14.6041 10.3438 14.376 10.3438 14.0947V4.75498Z"
+                            fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.0703 5.60319C12.0703 5.32183 12.3019 5.09375 12.5876 5.09375H15.6048C15.7904 5.09375 15.9618 5.19171 16.0539 5.35044L17.778 8.32215C17.8695 8.47982 17.8688 8.67353 17.7763 8.8306C17.6838 8.98767 17.5133 9.08434 17.3289 9.08434H12.5876C12.3019 9.08434 12.0703 8.85625 12.0703 8.5749V5.60319ZM13.1048 6.11262V8.06546H16.4376L15.3046 6.11262H13.1048Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <a href="#!">Tra&nbsp;cứu đơn&nbsp;hàng</a>
+                </li>
+                <li>
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="font-size: 24px;">
+                        <path
+                            d="M4.22266 13.8682V9.90212C4.22266 5.55569 7.72295 2 12.001 2C16.279 2 19.7782 5.55569 19.7782 9.90316V14.314C19.7782 17.6432 17.0197 20.0258 13.8188 20.3333"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M4.22222 8.66714V14.7771C2.99568 14.7771 2 13.6729 2 12.3126V11.1305C2 9.77026 2.99568 8.66602 4.22222 8.66602V8.66714Z"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M19.7778 14.7762V8.66623C21.0043 8.66623 22 9.77047 22 11.1308V12.3128C22 13.6731 21.0043 14.7773 19.7778 14.7773V14.7762Z"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M12.2964 19.2227H10.5933C9.83633 19.2227 9.22266 19.8342 9.22266 20.5886V20.6345C9.22266 21.3889 9.83633 22.0004 10.5933 22.0004H12.2964C13.0534 22.0004 13.6671 21.3889 13.6671 20.6345V20.5886C13.6671 19.8342 13.0534 19.2227 12.2964 19.2227Z"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                    <a href="#!">Trung&nbsp;tâm trợ&nbsp;giúp</a>
+                </li>
+                <li>
+                    <svg font-size="24" width="1em" height="1em" viewBox="0 0 22 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.90661 10.8953C11.7319 10.8953 13.2117 9.41554 13.2117 7.59021C13.2117 5.76488 11.7319 4.28516 9.90661 4.28516C8.08128 4.28516 6.60156 5.76488 6.60156 7.59021C6.60156 9.41554 8.08128 10.8953 9.90661 10.8953Z"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M4.67578 16.0858V15.6801C4.67578 13.0369 6.81816 10.8945 9.46136 10.8945H10.1138C12.757 10.8945 14.8994 13.0369 14.8994 15.6801V16.0858"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M9.70968 17.7742C14.5199 17.7742 18.4194 14.0192 18.4194 9.3871C18.4194 4.75503 14.5199 1 9.70968 1C4.89946 1 1 4.75503 1 9.3871C1 14.0192 4.89946 17.7742 9.70968 17.7742Z"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M21.0011 20.9992L15.8398 15.8379" stroke="currentColor" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <a href="#!">Tuyển&nbsp;dụng</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="nav-main">
+            <ul>
+                <li><a href="#!">FM</a></li>
+            </ul>
+            <ul>
+                <li><a href="#!">Nam</a></li>
+                <li><a href="#!">Nữ</a></li>
+                <li><a href="#!">Đồ đôi</a></li>
+                <li><a href="#!">Trẻ em</a></li>
+                <li><a href="#!">Sale</a></li>
+                <li><a href="#!">Bộ sưu tập</a></li>
+                <li><a href="#!">Tin tức</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <svg font-size="23" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                        viewBox="0 0 19.809 18.809">
+                        <g transform="translate(0.75 0.75)">
+                            <ellipse cx="7.297" cy="7.235" rx="7.297" ry="7.235" fill="none" stroke="#333333"
+                                stroke-width="1.5"></ellipse>
+                            <path d="M5.98,5.211.66.49" transform="translate(12.02 11.789)" fill="none" stroke="#333333"
+                                stroke-width="1.5"></path>
+                        </g>
+                    </svg>
+                    <input type="text" placeholder="Tìm kiếm ...">
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#!" class="btn login">Đăng nhập</a></li>
+                <!-- <li>Đăng ký</li> -->
+            </ul>
+            <ul>
+                <li onclick="openMenu()" style="cursor: pointer;"><svg font-size="24" width="1em" height="1em" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 23.8889C2.5 23.2752 3.00877 22.7778 3.63636 22.7778H26.3636C26.9912 22.7778 27.5 23.2752 27.5 23.8889C27.5 24.5025 26.9912 25 26.3636 25H3.63636C3.00877 25 2.5 24.5025 2.5 23.8889Z" fill="#3A3A3A"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 15C2.5 14.3864 3.00877 13.8889 3.63636 13.8889H26.3636C26.9912 13.8889 27.5 14.3864 27.5 15C27.5 15.6137 26.9912 16.1111 26.3636 16.1111H3.63636C3.00877 16.1111 2.5 15.6137 2.5 15Z" fill="#3A3A3A"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 6.11111C2.5 5.49746 3.00877 5 3.63636 5H26.3636C26.9912 5 27.5 5.49746 27.5 6.11111C27.5 6.72476 26.9912 7.22222 26.3636 7.22222H3.63636C3.00877 7.22222 2.5 6.72476 2.5 6.11111Z" fill="#3A3A3A"></path></svg></li>
+            </ul>
+        </nav>
+    </header>
+    <aside id="sidebar">
+        <div class="menu-sidebar">
+            <div class="menu-top">
+                <h2>FM</h2>
+                <button class="button" onclick="closeMenu()">X</button>
+            </div>
+            <div class="menu-content">
+                <!-- <ul>
+                    <li></li>
+                </ul> -->
+                <ul>
+                    <li>Nam</li>
+                    <li>Nữ</li>
+                    <li>Đồ đôi</li>
+                    <li>Trẻ em</li>
+                    <li>Sale</li>
+                </ul>
+            </div>
+            <div class="menu-bottom">
+                <ul>
+                    <li>Tư vấn Zalo</li>
+                    <li>Đăng nhập</li>
+                    <li>Đơn hàng của tôi</li>
+                    <li>Hệ thống cửa hàng</li>
+                    <li>Chính sách hỗ trợ</li>
+                    <li>Bộ sưu tập</li>
+                    <li>Tin tức</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <main id="main">
+        <section class="section-slider">
+            <div class="slider">
+                <div class="list">
+                    <div class="item">
+                        <img src="https://media.fmplus.com.vn/uploads/sliders/2c2abd60-aa84-42de-9ace-1c0219007a0d.png"
+                            alt="Slider Img1">
+                    </div>
+                    <div class="item">
+                        <img src="https://media.fmplus.com.vn/uploads/sliders/3db10944-7817-4c48-9565-dcf816a840ee.jpg"
+                            alt="Slider Img2">
+                    </div>
+                    <div class="item">
+                        <img src="https://media.fmplus.com.vn/uploads/sliders/9ec34c1e-ac69-4b8d-a543-9b3fc37cdc99.png"
+                            alt="Slider Img3">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="prev">‹</button>
+                    <button id="next">›</button>
+                </div>
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+        </section>
+        <section class="section-category">
+            <ul>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/8339c19d-1fe8-43fc-8a0d-474c9de17ca7.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/9d7afcef-aa32-4dc3-9c43-5f61cec4e502.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/bd5d9f39-2571-4ddc-9d57-5bbbafcc34c9.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/72c29cbe-5cdb-4853-9d38-e1079a86e35e.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/d083eb5e-0b3f-4138-8676-007768eae0ea.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/909fa1d0-6b99-4747-857e-d5e18c3270ad.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/f6c00282-fd0f-47c0-a376-4a1fa9896152.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/342843e8-9b96-486c-a45b-55884d0fcd92.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/3bbb07ba-875a-4e73-978d-b1ad0df666c9.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/c2838748-5038-4b3f-95f3-7e262a2e7b36.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/75c4fe5f-e6ea-4a12-91a2-f26afaea6ef8.png"
+                        alt=""></li>
+                <li><img src="https://media-fmplus.cdn.vccloud.vn/uploads/categories/e87112ef-d67c-4fe3-9c28-f40b95a57e62.png"
+                        alt=""></li>
+            </ul>
+
+        </section>
+        <section class="section-list">
+            <h3>Sản phẩm mới</h3>
+            <div class="list">
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/acn7004-cam-6.jpg?v=1714533314633"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>215.000 VND</p>
+                            <p>Áo nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-thun-the-thao-nam-stm7061-nav-1.jpg?v=1716339691437"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>238.000 VND</p>
+                            <p>Áo nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/chan-vay-nu-cvn7090-bee-1.jpg?v=1716514305477"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>232.000 VND</p>
+                            <p>Váy</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/quan-au-nu-qan7028-ghd-1.jpg?v=1716514232277"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>345.000 VND</p>
+                            <p>Quần nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-thun-the-thao-nam-stm7073-xam-1.jpg?v=1716273108157"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>135.000 VND</p>
+                            <p>Áo nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/bo-do-nam-bdm7019-den-1.jpg?v=1715658507877"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>435.000 VND</p>
+                            <p>Đồ bộ nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-so-mi-nam-scm7047-tit-1-yodyvn.jpg?v=1715654545740"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/chan-vay-nu-yody-cvn7058-nau-1.jpg?v=1716343150110"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Váy</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/vay-dam-tre-em-tay-bong-yody-vak7110-hog-1.jpg?v=1715048679403"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>135.000 VND</p>
+                            <p>Đồ trẻ em</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-polo-nam-yody-apm7217-tit-4.jpg?v=1716167973680"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>275.000 VND</p>
+                            <p>Áo nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+            </div>
+            <button class="button">
+                <a href="#!">Xem thêm</a>
+            </button>
+        </section>
+        <section class="section-four">
+            <img src="https://media-fmplus.cdn.vccloud.vn/uploads/sliders/48773c7d-80e2-4207-8ccc-ad79b804397a.png"
+                alt="">
+        </section>
+        <section class="section-list">
+            <h3>Sản phẩm áo</h3>
+            <div class="list">
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-thun-yoguu-retro-yody-gut7058-bee-sjn3052-xnh-11.jpg?v=1709608715057"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo thun nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/gut7050-tra-qsm6037-tan-5.jpg?v=1710487363020"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-thun-nu-yoguu-co-cao-yodygut7028-nau-sjn6004-xah-3.jpg?v=1708998641850"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/gut7056-den-3.jpg?v=1709691727563"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo nam đi chơi</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/sam6045-nav-3.jpg?v=1715055609597"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/cvn5096-den-apn5046-ddo-1.jpg?v=1690163788930"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo thun nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-polo-nam-cafe-yody-apm7187-nau-qsm6029-tit-5.jpg?v=1711444822920"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo thun nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/apm5083-vag-6.jpg?v=1702607264500"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo thun nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/ao-polo-nam-yody-apm7053-ghd-qkm6013-vag-3.jpg?v=1705630093473"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo thun nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/smm3010-gsa-qam3002-xad-8.jpg?v=1692606393950"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Áo sơ mi nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+            </div>
+            <button class="button">
+                <a href="#!">Xem thêm</a>
+            </button>
+        </section>
+        <section class="section-list">
+            <h3>Sản phẩm quần</h3>
+            <div class="list">
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media.fmplus.com.vn/el-finder-file-system/thumb/v1_L3Byb2R1Y3RzLzIzMTFRSlVMNTM2MjcwMS80NmI2NTI3OC0wYzA1LTRjYjEtOTU3Yy0yNTM0ZmZjNDEwYWJfRDUwMDVCQzE3NTY3OUFGREUyRjMzREZFOUEwQzZFNDAuanBn0"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần jean nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media.fmplus.com.vn/el-finder-file-system/thumb/v1_L3Byb2R1Y3RzLzIzMTJRVFVTNTgxMDcwMS9hYWZhOGI5Zi1mOTlkLTQxNWYtYWJhZC1mNzY3OTZhN2ViYjFfRjQ5MzU5Q0QzNDhBNDdGRDQ5REVGMzlGNTY5Rjc2QjUuanBn0"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần đen nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/quan-au-nam-yody-qam6017-xre-1.jpg?v=1711784459000"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần tây nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/quan-au-nu-qan7028-ghd-1.jpg?v=1716514232277"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/quan-the-thao-nu-ssn7046-den-1.jpg?v=1715653108000"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần ngắn nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/100/438/408/products/qnn6004-nau-1.jpg?v=1698897454360"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/quan-short-nam-sjm7021-tit-3.jpg?v=1715566850407"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần ngắn nam</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/chan-vay-nu-yody-cvn7058-nau-1.jpg?v=1716343150110"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Váy</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media.fmplus.com.vn/el-finder-file-system/thumb/v1_L3Byb2R1Y3RzLzIzMTBRSlVMNTM2MjAwMS9iNTRhY2I0MS01YThmLTRlNzctYjkyZi1kYTM4Mzg2ZTA0ZjJfQkZGRDU2RUU0MTZGNEI0MDZGODI4N0EzQUM3NDZEQzYuanBn0"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần jean nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media.fmplus.com.vn/el-finder-file-system/thumb/v1_L3Byb2R1Y3RzLzIzMTJCSlUqNTM2MTQwMi81OGVmZDMwNC01YmU4LTQ0MjYtOTA4OS02MTdkYzI0YWRiNDhfQzMyRDA3Mjk2NjcwQ0QyNzM4RUUxRDYxMjBFMkM1QkQuanBn0"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <p>235.000 VND</p>
+                            <p>Quần jean nữ</p>
+                        </figcaption>
+                    </a>
+                </div>
+            </div>
+            <button class="button">
+                <a href="#!">Xem thêm</a>
+            </button>
+        </section>
+        <section class="section-three">
+            <img class="item1"
+                src="https://media-fmplus.cdn.vccloud.vn/uploads/sliders/9ada03d4-6b3f-4a28-a7e0-646d0ace64e9.png"
+                alt="">
+            <img class="item2"
+                src="https://media-fmplus.cdn.vccloud.vn/uploads/sliders/dae37b8a-67be-4b3c-ae52-cc6c17c0fa91.png"
+                alt="">
+        </section>
+        <section class="section-news">
+            <div class="top">
+                <h3>Tin tức thời trang</h3>
+                <a href="#!">Xem thêm ›</a>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media-fmplus.cdn.vccloud.vn/uploads/news/82c29cf3-62b5-4dad-ae3a-83c7f6354689.jpeg"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <b>Set đồ đi cưới cho nam</b>
+                            <p>Việc lựa chọn trang phục phù hợp khi tham dự đám cưới ...</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media-fmplus.cdn.vccloud.vn/uploads/news/c505effc-e4e4-495a-9281-e9a09b906761.jpg"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <b>20+ Kiểu Tóc Ngắn Layer Nữ Đẹp</b>
+                            <p>Tóc ngắn layer nữ là kiểu tóc có khả năng biến hóa theo ...</p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media-fmplus.cdn.vccloud.vn/uploads/news/dde7c15b-6576-4110-be0b-1ff3cf08c195.png"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <b>Thời trang nam phong cách trẻ</b>
+                            <p>Thời trang nam là lĩnh vực khá đa dạng về phong cách và kiểu dáng ... </p>
+                        </figcaption>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#!">
+                        <figure>
+                            <img src="https://media-fmplus.cdn.vccloud.vn/uploads/news/ed56c5fa-ed68-4440-b821-4ab4a3c578fb.jpg"
+                                alt='post' width="100%" />
+                        </figure>
+                        <figcaption>
+                            <b>15+ Cách Phối Màu Quần Áo Nam Như Stylist</b>
+                            <p>Những món đồ bình dân, giá rẻ cũng sẽ trở nên cao cấp ...</p>
+                        </figcaption>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="zalo">
+        <a href="#">
+            <img src="https://web.levanquy.com/static/media/zalo.9a3807bd0aeb1523d5088f182f8b69b6.svg" alt="Zalo">
+        </a>
+    </div>
+    <footer id="footer">
+        <div class="footer-main">
+            <div class="item">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#!">Giới thiệu</a></li>
+                    <li><a href="#!">Liên hệ</a></li>
+                    <li><a href="#!">Hệ thống cửa hàng</a></li>
+                    <li><a href="#!">Tuyển dụng</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Trung tâm trợ giúp</h3>
+                <ul>
+                    <li><a href="#!">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#!">Hướng dẫn chọn size</a></li>
+                    <li><a href="#!">Chính sách Bảo hành & Đổi trả</a></li>
+                    <li><a href="#!">Chính sách khách hàng thành viên</a></li>
+                    <li><a href="#!">Chính sách vận chuyển</a></li>
+                    <li><a href="#!">Chính sách bảo mật & chia sẻ thông tin</a></li>
+                    <li><a href="#!">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Liên hệ</h3>
+                <ul>
+                    <li><a href="#!">Phone: +84 123 456 789</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 15.576172 6 C 12.118043 9.5981082 10 14.323627 10 19.5 C 10 24.861353 12.268148 29.748596 15.949219 33.388672 C 15.815412 33.261195 15.988635 33.48288 16.005859 33.875 C 16.023639 34.279773 15.962689 34.835916 15.798828 35.386719 C 15.471108 36.488324 14.785653 37.503741 13.683594 37.871094 A 1.0001 1.0001 0 0 0 13.804688 39.800781 C 16.564391 40.352722 18.51646 39.521812 19.955078 38.861328 C 21.393696 38.200845 22.171033 37.756375 23.625 38.34375 A 1.0001 1.0001 0 0 0 23.636719 38.347656 C 26.359037 39.41176 29.356235 40 32.5 40 C 36.69732 40 40.631169 38.95117 44 37.123047 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 18.496094 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 34.804688 C 40.72689 36.812719 36.774644 38 32.5 38 C 29.610147 38 26.863646 37.459407 24.375 36.488281 C 22.261967 35.634656 20.540725 36.391201 19.121094 37.042969 C 18.352251 37.395952 17.593707 37.689389 16.736328 37.851562 C 17.160501 37.246758 17.523335 36.600775 17.714844 35.957031 C 17.941109 35.196459 18.033096 34.45168 18.003906 33.787109 C 17.974816 33.12484 17.916946 32.518297 17.357422 31.96875 L 17.355469 31.966797 C 14.016928 28.665356 12 24.298743 12 19.5 C 12 14.177406 14.48618 9.3876296 18.496094 6 z M 32.984375 14.986328 A 1.0001 1.0001 0 0 0 32 16 L 32 25 A 1.0001 1.0001 0 1 0 34 25 L 34 16 A 1.0001 1.0001 0 0 0 32.984375 14.986328 z M 18 16 A 1.0001 1.0001 0 1 0 18 18 L 21.197266 18 L 17.152344 24.470703 A 1.0001 1.0001 0 0 0 18 26 L 23 26 A 1.0001 1.0001 0 1 0 23 24 L 19.802734 24 L 23.847656 17.529297 A 1.0001 1.0001 0 0 0 23 16 L 18 16 z M 29.984375 18.986328 A 1.0001 1.0001 0 0 0 29.162109 19.443359 C 28.664523 19.170123 28.103459 19 27.5 19 C 25.578848 19 24 20.578848 24 22.5 C 24 24.421152 25.578848 26 27.5 26 C 28.10285 26 28.662926 25.829365 29.160156 25.556641 A 1.0001 1.0001 0 0 0 31 25 L 31 22.5 L 31 20 A 1.0001 1.0001 0 0 0 29.984375 18.986328 z M 38.5 19 C 36.578848 19 35 20.578848 35 22.5 C 35 24.421152 36.578848 26 38.5 26 C 40.421152 26 42 24.421152 42 22.5 C 42 20.578848 40.421152 19 38.5 19 z M 27.5 21 C 28.340272 21 29 21.659728 29 22.5 C 29 23.340272 28.340272 24 27.5 24 C 26.659728 24 26 23.340272 26 22.5 C 26 21.659728 26.659728 21 27.5 21 z M 38.5 21 C 39.340272 21 40 21.659728 40 22.5 C 40 23.340272 39.340272 24 38.5 24 C 37.659728 24 37 23.340272 37 22.5 C 37 21.659728 37.659728 21 38.5 21 z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                            </path>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Đăng ký nhận tin từ FM</h3>
+                <ul>
+                    <li>
+                        <label for="">
+                            <input type="text" placeholder="Nhập địa chỉ Email">
+                            <button>Đăng ký</button>
+                        </label>
+                    </li>
+                    <li></li>
+                </ul>
+                <h3>Tải ứng dụng của chúng tôi tại:</h3>
+                <ul>
+                    <li>
+                        <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1614438298pUvmvqiaXbF1eA4.png" style="max-width: 120px;" alt="">
+                    </li>
+                    <li>
+                        <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1614438295yeEDycl0E6dCNv9.png" style="max-width: 120px;" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Bản quyền thuộc về A0623I1</p>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

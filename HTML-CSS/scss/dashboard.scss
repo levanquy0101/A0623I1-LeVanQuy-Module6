@@ -353,7 +353,7 @@ body {
       overflow: auto;
 
       .content-body {
-        margin-top: 5%;
+        margin-top: 100px;
         width: 100%;
 
         .content-header {
@@ -603,4 +603,32 @@ body {
       }
     }
   }
+}
+
+
+/* Màn hình Tablet lớn */
+@media screen and (max-width: 992px){
+  .dashboard-header{
+    .search-bar{
+      display: none;
+    }
+    .logo-brand{
+      flex: 1;
+    }
+    .login-btn{
+      display: none !important;
+    }
+  }
+}
+/* Màn hình Tablet */
+@media screen and (max-width: 768px) {
+
+}
+/* Màn hình Mobile */
+@media screen and (max-width : 534px){
+
+}
+/* Màn hình Mobile cực nhỏ */
+@media screen and (max-width : 320px){
+
 }

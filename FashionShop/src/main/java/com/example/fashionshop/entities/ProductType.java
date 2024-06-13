@@ -1,7 +1,13 @@
 package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class ProductType {
     @Id
@@ -14,30 +20,4 @@ public class ProductType {
     @JoinColumn
     private ProductTarget target;
 
-    public ProductType() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public ProductTarget getTarget() {
-        return target;
-    }
-
-    public void setTarget(ProductTarget target) {
-        this.target = target;
-    }
 }

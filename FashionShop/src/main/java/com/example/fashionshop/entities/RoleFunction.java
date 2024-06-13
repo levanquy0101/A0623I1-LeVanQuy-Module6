@@ -1,7 +1,13 @@
 package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class RoleFunction {
 
@@ -17,31 +23,4 @@ public class RoleFunction {
     @JoinColumn
     private FuncSystem funcSystem;
 
-    public RoleFunction() {
-    }
-
-    // Getter và setter
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
-    public FuncSystem getFuncSystem() {
-        return funcSystem;
-    }
-
-    public void setFuncSystem(FuncSystem funcSystem) {
-        this.funcSystem = funcSystem;
-    }
 }

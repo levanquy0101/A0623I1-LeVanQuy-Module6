@@ -1,0 +1,125 @@
+/*-------------- Reset CSS----------- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* -----------------------------CSS cho phần Footer (phần cuối trang web) ---------------------------------*/
+#footer{
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+    a{
+        color: black;
+    }
+    .footer-main{
+        padding: 3.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .item{
+            min-width: 25%;
+            ul{
+                li{
+                    margin: 14px 0;
+                }
+            }
+        }
+        .item:nth-child(3){
+            ul+ul{
+                display: flex;
+                li{
+                    margin: 0;
+                    svg{
+                        border: 1px solid black;
+                        border-radius: 4px;
+                        background-color: #ccc;
+                        width: 32px;
+                        height: 32px;
+                    } 
+                }
+                li+li{
+                    margin-left: 16px;
+                    
+                }
+            }
+        }
+        .item:nth-child(4){
+            ul+h3+ul{
+                display: flex;
+                li+li{
+                    margin-left: 8px;
+                }
+            }
+            ul{
+                li{
+                    label{
+                        input,button{
+                            padding: 6px 8px;
+                            outline: none;
+                            border: 1px solid #ccc;
+                        }
+                        button{
+                            background-color: orangered;
+                            color: white; 
+                            border: none;  
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        background-color: #2d2d2d;
+        text-align: center;
+        p{
+            min-height: 55px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+/* ------------------------------------------Responsive -------------------------------------------*/
+/* @media screen {  */
+  /* Được dùng khi không ăn responsive */
+/* } */
+
+/* Màn hình Desktop cực lớn */
+@media screen and (min-width: 1920px){
+
+}
+/* Màn hình Desktop lớn */
+@media screen and (max-width: 1492px){
+
+}
+/* Màn hình Desktop */
+@media screen and (max-width: 1200px){
+
+}
+/* Màn hình Tablet lớn */
+@media screen and (max-width: 992px){
+
+}
+/* Màn hình Tablet */
+@media screen and (max-width: 768px) {
+    #footer {
+        .footer-main{
+            padding: 1.4rem;
+        }
+    }
+
+}
+/* Màn hình Mobile */
+@media screen and (max-width : 534px){
+
+}
+/* Màn hình Mobile cực nhỏ */
+@media screen and (max-width : 320px){
+
+}

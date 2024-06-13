@@ -49,10 +49,16 @@ body::-webkit-scrollbar-track {
   gap: 10px;
   cursor: pointer;
 }
+#header .nav-top ul li a {
+  color: black;
+}
 #header .nav-top ul li:hover {
   color: red;
 }
 #header .nav-top ul li:hover img {
+  color: red;
+}
+#header .nav-top ul li:hover a {
   color: red;
 }
 #header .nav-main {
@@ -69,6 +75,9 @@ body::-webkit-scrollbar-track {
 }
 #header .nav-main ul li {
   padding: 0 12px;
+}
+#header .nav-main ul li a {
+  color: red;
 }
 #header .nav-main ul .btn {
   padding: 8px 0;
@@ -129,7 +138,7 @@ body::-webkit-scrollbar-track {
   align-items: center;
   position: relative;
 }
-#header .nav-main ul:nth-child(3) li img {
+#header .nav-main ul:nth-child(3) li svg {
   position: absolute;
   left: 20px;
 }
@@ -183,7 +192,7 @@ body::-webkit-scrollbar-track {
   height: 24px;
 }
 #sidebar .menu-sidebar .menu-content {
-  padding: 8px;
+  padding: 12px;
 }
 #sidebar .menu-sidebar .menu-content ul li {
   margin: 8px 0;
@@ -211,14 +220,14 @@ body::-webkit-scrollbar-track {
 #main {
   margin-top: 124px;
 }
-#main .section-one .slider {
+#main .section-slider .slider {
   max-width: 100%;
   height: calc(100vh - 124px);
   margin: auto;
   position: relative;
   overflow: hidden;
 }
-#main .section-one .slider .list {
+#main .section-slider .slider .list {
   position: absolute;
   height: 100%;
   left: 0;
@@ -226,12 +235,12 @@ body::-webkit-scrollbar-track {
   display: flex;
   transition: 1s;
 }
-#main .section-one .slider .list img {
+#main .section-slider .slider .list img {
   width: 100vw;
   height: 100%;
   background-color: #ccc;
 }
-#main .section-one .slider .buttons {
+#main .section-slider .slider .buttons {
   position: absolute;
   top: 45%;
   left: 1%;
@@ -239,7 +248,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: space-between;
 }
-#main .section-one .slider .buttons button {
+#main .section-slider .slider .buttons button {
   width: 36px;
   height: 50px;
   border-radius: 8px;
@@ -250,7 +259,7 @@ body::-webkit-scrollbar-track {
   font-weight: bold;
   cursor: pointer;
 }
-#main .section-one .slider .dots {
+#main .section-slider .slider .dots {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -261,7 +270,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: center;
 }
-#main .section-one .slider .dots li {
+#main .section-slider .slider .dots li {
   list-style: none;
   width: 10px;
   height: 8px;
@@ -270,28 +279,28 @@ body::-webkit-scrollbar-track {
   border-radius: 4px;
   transition: 0.5s;
 }
-#main .section-one .slider .dots li.active {
+#main .section-slider .slider .dots li.active {
   width: 30px;
 }
 @media screen and (max-width: 768px) {
-  #main .section-one .slider {
+  #main .section-slider .slider {
     height: 400px;
   }
 }
-#main .section-two {
+#main .section-category {
   --columns: 6;
   display: flex;
   justify-content: center;
   padding-top: 25px;
   margin: 2rem 0;
 }
-#main .section-two ul {
+#main .section-category ul {
   width: 75%;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
-#main .section-two ul li {
+#main .section-category ul li {
   border: 1px solid #ccc;
   width: calc(100% / var(--columns) - 16px);
   aspect-ratio: 5/3;
@@ -301,23 +310,23 @@ body::-webkit-scrollbar-track {
   align-items: center;
   box-shadow: 1px 1px 4px #ccc;
 }
-#main .section-two ul li:hover {
+#main .section-category ul li:hover {
   border-color: red;
 }
-#main .section-two ul li img {
+#main .section-category ul li img {
   width: 100%;
   border-radius: 4px;
 }
-#main .section-abc {
+#main .section-list {
   padding: 2.4vw;
 }
-#main .section-abc h3 {
+#main .section-list h3 {
   text-transform: uppercase;
   font-size: 1rem;
   position: relative;
   display: flex;
 }
-#main .section-abc h3::before {
+#main .section-list h3::before {
   content: "";
   position: absolute;
   left: 0;
@@ -328,7 +337,7 @@ body::-webkit-scrollbar-track {
   background-color: #fcaf17;
   margin-left: -8px;
 }
-#main .section-abc .list {
+#main .section-list .list {
   margin: 2rem 0;
   --columns: 5;
   --space: 16px;
@@ -337,18 +346,18 @@ body::-webkit-scrollbar-track {
   gap: var(--space);
   margin-left: var(--space);
 }
-#main .section-abc .list .item {
+#main .section-list .list .item {
   width: calc(100% / var(--columns) - var(--space));
   border: 1px solid #ccc;
   cursor: pointer;
   overflow: hidden;
 }
-#main .section-abc .list .item figure {
+#main .section-list .list .item figure {
   position: relative;
   width: 100%;
   aspect-ratio: 3/4;
 }
-#main .section-abc .list .item figure img {
+#main .section-list .list .item figure img {
   width: 100%;
   transition: transform 0.3s;
   position: absolute;
@@ -357,18 +366,21 @@ body::-webkit-scrollbar-track {
   transition: transform 0.3s ease;
   background-color: #ccc;
 }
-#main .section-abc .list .item figure:hover img {
+#main .section-list .list .item figure:hover img {
   transform: scale(1.05);
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-#main .section-abc .list .item figcaption {
+#main .section-list .list .item figcaption {
   background-color: white;
   padding: 8px;
 }
-#main .section-abc .list .item figcaption p:first-child {
+#main .section-list .list .item figcaption p:first-child {
   color: red;
 }
-#main .section-abc .button {
+#main .section-list .list .item figcaption p:last-child {
+  color: black;
+}
+#main .section-list .button {
   display: block;
   margin: auto;
   margin-top: 1rem;
@@ -378,16 +390,16 @@ body::-webkit-scrollbar-track {
   background-color: white;
   cursor: pointer;
 }
-#main .section-abc .button a {
+#main .section-list .button a {
   color: orangered;
   padding: 8px 10px;
   display: block;
 }
-#main .section-abc .button a::after {
+#main .section-list .button a::after {
   content: "›";
   padding-left: 6px;
 }
-#main .section-abc .button a:hover {
+#main .section-list .button a:hover {
   background-color: orangered;
   color: white;
   transition: 0.5s;
@@ -402,25 +414,25 @@ body::-webkit-scrollbar-track {
   width: 100%;
   min-height: 150px;
 }
-#main .section-five {
+#main .section-news {
   padding: 2.4vw;
   --spacing: 10px;
   margin: 1rem 0;
 }
-#main .section-five strong {
+#main .section-news strong {
   font-size: 1.5rem;
 }
-#main .section-five .top {
+#main .section-news .top {
   display: flex;
   justify-content: space-between;
 }
-#main .section-five .top h3 {
+#main .section-news .top h3 {
   text-transform: uppercase;
   font-size: 1rem;
   position: relative;
   display: flex;
 }
-#main .section-five .top h3::before {
+#main .section-news .top h3::before {
   content: "";
   position: absolute;
   left: 0;
@@ -431,40 +443,46 @@ body::-webkit-scrollbar-track {
   background-color: #fcaf17;
   margin-left: -8px;
 }
-#main .section-five .list {
+#main .section-news .top a {
+  color: black;
+}
+#main .section-news .list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   padding: var(--spacing);
 }
-#main .section-five .list .item {
+#main .section-news .list .item {
   padding: var(--spacing);
 }
-#main .section-five .list .item a {
+#main .section-news .list .item figcaption {
+  color: black;
+}
+#main .section-news .list .item a {
   max-width: 100%;
 }
-#main .section-five .list .item a img {
+#main .section-news .list .item a img {
   max-width: 100%;
   border-radius: 4px;
 }
-#main .section-five .list .item a img:hover {
+#main .section-news .list .item a img:hover {
   transform: translateY(-1px) scale(1.01);
 }
-#main .section-five .list .item:first-child {
+#main .section-news .list .item:first-child {
   grid-row-start: 1;
   grid-row-end: 4;
 }
-#main .section-five .list .item:nth-child(n+2) a {
+#main .section-news .list .item:nth-child(n+2) a {
   display: flex;
 }
-#main .section-five .list .item:nth-child(n+2) a figure {
+#main .section-news .list .item:nth-child(n+2) a figure {
   width: 33.3333333333%;
 }
-#main .section-five .list .item:nth-child(n+2) a figcaption {
+#main .section-news .list .item:nth-child(n+2) a figcaption {
   flex: 1;
   padding-left: 10px;
 }
-#main .section-five .button {
+#main .section-news .button {
   display: block;
   margin: auto;
   margin-top: 1rem;
@@ -474,16 +492,16 @@ body::-webkit-scrollbar-track {
   background-color: white;
   cursor: pointer;
 }
-#main .section-five .button a {
+#main .section-news .button a {
   color: orangered;
   padding: 8px 10px;
   display: block;
 }
-#main .section-five .button a::after {
+#main .section-news .button a::after {
   content: "›";
   padding-left: 6px;
 }
-#main .section-five .button a:hover {
+#main .section-news .button a:hover {
   background-color: orangered;
   color: white;
   transition: 0.5s;
@@ -499,6 +517,9 @@ body::-webkit-scrollbar-track {
 #footer {
   background-color: #fafafa;
   border-top: 1px solid #ccc;
+}
+#footer a {
+  color: black;
 }
 #footer .footer-main {
   padding: 3.2rem;
@@ -593,7 +614,7 @@ body::-webkit-scrollbar-track {
 }
 /* Màn hình Tablet */
 @media screen and (max-width: 768px) {
-  #header .nav-top ul li span {
+  #header .nav-top ul li a {
     font-size: 0;
   }
   #header .nav-main ul:nth-child(2) {
@@ -609,31 +630,31 @@ body::-webkit-scrollbar-track {
   #header .nav-main ul:nth-child(3) li input {
     width: 100%;
   }
-  #main .section-abc .list {
+  #main .section-list .list {
     --columns: 3;
     --space: 16px;
     margin-left: var(--space);
   }
-  #main .section-five {
+  #main .section-news {
     --spacing: 4px;
   }
-  #main .section-five .list {
+  #main .section-news .list {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
-  #main .section-five .list .item {
+  #main .section-news .list .item {
     padding: var(--spacing);
     grid-column-start: 1;
     grid-column-end: 3;
   }
-  #main .section-five .list .item a {
+  #main .section-news .list .item a {
     max-width: 100%;
   }
-  #main .section-five .list .item a img {
+  #main .section-news .list .item a img {
     max-width: 100%;
     border-radius: 4px;
   }
-  #main .section-five .list .item a img:hover {
+  #main .section-news .list .item a img:hover {
     transform: translateY(-1px) scale(1.01);
   }
   #footer .footer-main {
@@ -657,10 +678,10 @@ body::-webkit-scrollbar-track {
   #main .section-one .slider {
     height: 300px;
   }
-  #main .section-two {
+  #main .section-category {
     --columns: 3;
   }
-  #main .section-abc .list {
+  #main .section-list .list {
     --columns: 2;
     --space: 16px;
     margin-left: var(--space);
@@ -691,4 +712,4 @@ body::-webkit-scrollbar-track {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=home.css.map */

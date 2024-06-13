@@ -1,7 +1,13 @@
 package com.example.fashionshop.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class StoreManager {
     @Id
@@ -16,38 +22,4 @@ public class StoreManager {
     @Column
     private String instruct;
 
-    public StoreManager() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public UserRole getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(UserRole userRole) {
-        this.userRole = userRole;
-    }
-
-    public RoleFunction getRoleFunction() {
-        return roleFunction;
-    }
-
-    public void setRoleFunction(RoleFunction roleFunction) {
-        this.roleFunction = roleFunction;
-    }
-
-    public String getInstruct() {
-        return instruct;
-    }
-
-    public void setInstruct(String instruct) {
-        this.instruct = instruct;
-    }
 }

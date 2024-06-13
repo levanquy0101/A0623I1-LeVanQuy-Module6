@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/*-------------- Reset CSS----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* -----------------------------CSS cho phần Footer (phần cuối trang web) ---------------------------------*/
+#footer {
+  background-color: #fafafa;
+  border-top: 1px solid #ccc;
+}
+#footer a {
+  color: black;
+}
+#footer .footer-main {
+  padding: 3.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer .footer-main .item {
+  min-width: 25%;
+}
+#footer .footer-main .item ul li {
+  margin: 14px 0;
+}
+#footer .footer-main .item:nth-child(3) ul + ul {
+  display: flex;
+}
+#footer .footer-main .item:nth-child(3) ul + ul li {
+  margin: 0;
+}
+#footer .footer-main .item:nth-child(3) ul + ul li svg {
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #ccc;
+  width: 32px;
+  height: 32px;
+}
+#footer .footer-main .item:nth-child(3) ul + ul li + li {
+  margin-left: 16px;
+}
+#footer .footer-main .item:nth-child(4) ul + h3 + ul {
+  display: flex;
+}
+#footer .footer-main .item:nth-child(4) ul + h3 + ul li + li {
+  margin-left: 8px;
+}
+#footer .footer-main .item:nth-child(4) ul li label input, #footer .footer-main .item:nth-child(4) ul li label button {
+  padding: 6px 8px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+#footer .footer-main .item:nth-child(4) ul li label button {
+  background-color: orangered;
+  color: white;
+  border: none;
+}
+#footer .footer-bottom {
+  background-color: #2d2d2d;
+  text-align: center;
+}
+#footer .footer-bottom p {
+  min-height: 55px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------------Responsive -------------------------------------------*/
+/* @media screen {  */
+/* Được dùng khi không ăn responsive */
+/* } */
+/* Màn hình Desktop cực lớn */
+/* Màn hình Desktop lớn */
+/* Màn hình Desktop */
+/* Màn hình Tablet lớn */
+/* Màn hình Tablet */
+@media screen and (max-width: 768px) {
+  #footer .footer-main {
+    padding: 1.4rem;
+  }
+}
+/* Màn hình Mobile */
+/* Màn hình Mobile cực nhỏ */
+
+/*# sourceMappingURL=footer.css.map */

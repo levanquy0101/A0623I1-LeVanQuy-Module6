@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 * {
   box-sizing: border-box;
@@ -333,7 +334,7 @@ body {
   overflow: auto;
 }
 .app-container .content-wrapper .app-content .content-body {
-  margin-top: 5%;
+  margin-top: 100px;
   width: 100%;
 }
 .app-container .content-wrapper .app-content .content-body .content-header {
@@ -549,5 +550,21 @@ body {
   position: relative;
   color: var(--sidebar-main-color);
 }
+
+/* Màn hình Tablet lớn */
+@media screen and (max-width: 992px) {
+  .dashboard-header .search-bar {
+    display: none;
+  }
+  .dashboard-header .logo-brand {
+    flex: 1;
+  }
+  .dashboard-header .login-btn {
+    display: none !important;
+  }
+}
+/* Màn hình Tablet */
+/* Màn hình Mobile */
+/* Màn hình Mobile cực nhỏ */
 
 /*# sourceMappingURL=dashboard.css.map */
