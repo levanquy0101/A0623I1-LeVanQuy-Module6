@@ -1,5 +1,6 @@
 package com.example.fashionshop.services;
 
+import com.example.fashionshop.dto.UserDTO;
 import com.example.fashionshop.entities.User;
 
 public interface IUserService {
@@ -10,4 +11,5 @@ public interface IUserService {
     User findById(Long id);
 
     User findByUsername(String username);
+    UserDTO convertToDTO(User user);
 }

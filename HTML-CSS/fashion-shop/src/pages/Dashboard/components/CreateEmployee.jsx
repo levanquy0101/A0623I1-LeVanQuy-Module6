@@ -1,18 +1,25 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useState,useEffect } from 'react';
 import * as ManagerService from '../../../services/api/ManagerService'
+import * as RolesService from '../../../services/api/RolesService'
 
 function CreateEmployee() {
-
+  const [roles, setRoles] = useState([]);
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  useEffect(() => {
+    getRoles()
+  }, []);
+
+  const getRoles = async () => {
+    const res = await RolesService.getAll()
+    setRoles(res)
+  }
   const onSubmit = async (data) => {
     console.log(data); 
-    if(data.doa == "salesman"){
-        await ManagerService.save(data)
-    }else{
-        console.log("Không phải ")
-    }
+    data.role = JSON.parse(data.role)
+    await ManagerService.save(data)
   };
 
   return (
@@ -44,7 +51,15 @@ function CreateEmployee() {
       </div>
       <div>
         <label>Phân quyền:</label>
-        <input type="text" {...register('doa',)} value={"salesman"} />
+        <select {...register('role',)}>
+          <option value="">--- Phân quyền ---</option>
+          {
+            roles?.map(item => (
+              <option key={item.id} value={JSON.stringify(item)}>{item.name}</option>
+              )
+            )
+          }
+        </select>
         {errors.name && <span>This field is required</span>}
       </div>
       <div>

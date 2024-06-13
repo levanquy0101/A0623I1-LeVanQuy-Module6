@@ -1,6 +1,7 @@
 //package com.example.fashionshop.controllers;
 //
-//import com.example.fashionshop.dto.LoginFormDTO;
+//
+//import com.example.fashionshop.dto.LoginRequest;
 //import jakarta.servlet.http.HttpServletResponse;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.http.HttpStatus;
@@ -26,13 +27,13 @@
 //    @Autowired
 //    private UserDetailsService userDetailsService;
 //
-//    @PostMapping("/api/login")
-//    public ResponseEntity<String> login(@RequestBody LoginFormDTO loginForm, HttpServletResponse response) {
+//    @PostMapping("/auth/login")
+//    public ResponseEntity<String> login(@RequestBody LoginRequest loginForm, HttpServletResponse response) {
 //        try {
 //            // Authenticate user
 //            Authentication authentication = authenticationManager.authenticate(
 //                    new UsernamePasswordAuthenticationToken(loginForm.getUsername(), loginForm.getPassword()));
-//
+//            System.out.println(loginForm.getUsername());
 //            // Generate JWT token (implement this logic securely)
 //
 //            // Set JWT token in response header

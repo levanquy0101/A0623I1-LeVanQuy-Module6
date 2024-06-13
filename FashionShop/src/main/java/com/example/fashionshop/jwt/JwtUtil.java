@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Component
-public class Jwt {
+public class JwtUtil {
 
     private String SECRET_KEY = "secret"; // Nên đặt trong file cấu hình hoặc biến môi trường
 

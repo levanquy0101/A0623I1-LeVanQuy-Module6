@@ -1,5 +1,6 @@
 package com.example.fashionshop.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +26,7 @@ public class User {
     @Column
     private String username;
     @Column
+    @JsonIgnore
     private String password;
     @Column
     private boolean enabled;

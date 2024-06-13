@@ -1,5 +1,6 @@
 package com.example.fashionshop.services.impl;
 
+import com.example.fashionshop.dto.UserDTO;
 import com.example.fashionshop.entities.User;
 import com.example.fashionshop.repositories.IUserRepo;
 import com.example.fashionshop.services.IUserService;
@@ -37,5 +38,22 @@ public class UserService implements IUserService {
     @Override
     public User findByUsername(String username) {
         return iUserRepository.findByUsername(username);
+    }
+
+    public UserDTO convertToDTO(User user) {
+        return new UserDTO(
+                user.getId(),
+                user.getCode(),
+                user.getName(),
+                user.getGender(),
+                user.getUsername(),
+                user.isEnabled(),
+                user.getRole(),
+                user.getDate(),
+                user.getAddress(),
+                user.getEmail(),
+                user.getPhone()
+
+        );
     }
 }
