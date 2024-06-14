@@ -23,6 +23,14 @@ public class AuthRestController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    private final JwtUtil jwtUtil;
+
+    @Autowired
+    public AuthRestController(AuthenticationManager authenticationManager, JwtUtil jwtUtil) {
+        this.authenticationManager = authenticationManager;
+        this.jwtUtil = jwtUtil;
+    }
+
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest, HttpServletRequest request) {
@@ -36,11 +44,11 @@ public class AuthRestController {
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
 //            // Tạo JWT
-//            String jwtToken = jwtUtil.generateToken(loginRequest.getUsername());
+            String jwtToken = jwtUtil.generateToken(loginRequest.getUsername());
 
             LoginResponse response = new LoginResponse();
             response.setMessage("Login successful");
-//            response.setToken(jwtToken);
+            response.setToken(jwtToken);
 
             return ResponseEntity.ok(response);
         } catch (Exception e) {
